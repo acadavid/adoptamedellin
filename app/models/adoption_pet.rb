@@ -3,7 +3,9 @@ class AdoptionPet < ActiveRecord::Base
 
   has_one :pet, :dependent => :destroy, :as => :owner
 
+  validates :pet, :presence => true
+
   accepts_nested_attributes_for :pet
 
-  delegate :name, :age, :animal, :size, :to => :pet
+  delegate :name, :age, :animal, :size, :pictures, :to => :pet
 end

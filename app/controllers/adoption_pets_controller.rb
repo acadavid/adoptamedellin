@@ -17,6 +17,7 @@ class AdoptionPetsController < ApplicationController
 
   def new
     @adoption_pet = AdoptionPet.new
+    @adoption_pet.pet = Pet.new
 
     respond_with @adoption_pet
   end

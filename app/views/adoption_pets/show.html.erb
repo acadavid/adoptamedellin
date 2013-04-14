@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<% @adoption_pet.pictures.each do |pic| %>
+  <%= image_tag pic.file.url %>
+<% end %>
+
 <p>
   <b>Perro/Gato:</b>
   <%= @adoption_pet.animal %>

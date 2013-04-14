@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130414032840) do
+ActiveRecord::Schema.define(:version => 20130414053213) do
 
   create_table "adoption_pets", :force => true do |t|
     t.boolean  "vaccines"
@@ -39,5 +39,14 @@ ActiveRecord::Schema.define(:version => 20130414032840) do
     t.integer  "owner_id"
     t.string   "owner_type"
   end
+
+  create_table "pictures", :force => true do |t|
+    t.string   "file"
+    t.integer  "pet_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "pictures", ["pet_id"], :name => "index_pictures_on_pet_id"
 
 end

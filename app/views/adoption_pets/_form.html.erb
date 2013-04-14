@@ -1,4 +1,4 @@
-<%= form_for(@adoption_pet) do |f| %>
+<%= nested_form_for(@adoption_pet, :html => { :multipart => true }) do |f| %>
   <% if @adoption_pet.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@adoption_pet.errors.count, "error") %> prohibited this adoption_pet from being saved:</h2>
@@ -61,6 +61,16 @@
       <%= f.label "Historia de la mascota" %><br />
       <%= pet_form.text_area :story %>
     </div>
+
+    <%= pet_form.fields_for :pictures, Picture.new do |picture_form|  %>
+      <div class="field">
+        <%= picture_form.label :file %><br />
+        <%= picture_form.file_field :file %>
+      </div>
+      <%= picture_form.link_to_remove "Eliminar esta foto" %>
+
+    <% end %>
+    <%= pet_form.link_to_add "Agregar otra foto", :pictures %>
 
   <% end %>
 
