@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Perro/Gato:</b>
+  <%= @adoption_pet.animal %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @adoption_pet.name %>
+</p>
+
+<p>
+  <b>Vaccines:</b>
+  <%= @adoption_pet.vaccines %>
+</p>
+
+<p>
+  <b>Neutered:</b>
+  <%= @adoption_pet.neutered %>
+</p>
+
+<p>
+  <b>Temperament:</b>
+  <%= @adoption_pet.temperament %>
+</p>
+
+<p>
+  <b>Like kids:</b>
+  <%= @adoption_pet.like_kids %>
+</p>
+
+
+<%= link_to 'Edit', edit_adoption_pet_path(@adoption_pet) %> |
+<%= link_to 'Back', adoption_pets_path %>

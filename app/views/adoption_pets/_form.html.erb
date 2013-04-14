@@ -1,0 +1,86 @@
+<%= form_for(@adoption_pet) do |f| %>
+  <% if @adoption_pet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@adoption_pet.errors.count, "error") %> prohibited this adoption_pet from being saved:</h2>
+
+      <ul>
+      <% @adoption_pet.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.fields_for :pet_attributes, @adoption_pet.pet do |pet_form| %>
+    <div class="field">
+      <%= f.label "Perro o Gato" %><br />
+      <%= select("adoption_pet[pet_attributes]", "animal", Pet.valid_animals, { :include_blank => true, :selected => @adoption_pet.pet.try(:animal) }) %>
+    </div>
+
+    <div class="field">
+      <%= f.label "Nombre" %><br />
+      <%= pet_form.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= f.label "Edad" %><br />
+      <%= pet_form.text_field :age %>
+    </div>
+
+    <div class="field">
+      <%= f.label "Tamaño" %><br />
+      <%= pet_form.text_field :size %>
+    </div>
+
+    <div class="field">
+      <%= f.label "Raza" %><br />
+      <%= pet_form.text_field :breed %>
+    </div>
+
+    <div class="field">
+      <%= f.label "Color" %><br />
+      <%= pet_form.text_field :color %>
+    </div>
+
+    <div class="field">
+      <%= f.label "Ubicación" %><br />
+      <%= pet_form.text_field :location %>
+    </div>
+
+    <div class="field">
+      <%= f.label "Marcas" %><br />
+      <%= pet_form.text_area :marks %>
+    </div>
+
+    <div class="field">
+      <%= f.label "Notas adicionales" %><br />
+      <%= pet_form.text_area :notes %>
+    </div>
+
+    <div class="field">
+      <%= f.label "Historia de la mascota" %><br />
+      <%= pet_form.text_area :story %>
+    </div>
+
+  <% end %>
+
+  <div class="field">
+    <%= f.label "Está vacunado?" %><br />
+    <%= f.check_box :vaccines %>
+  </div>
+  <div class="field">
+    <%= f.label "Está esterilizado?" %><br />
+    <%= f.check_box :neutered %>
+  </div>
+  <div class="field">
+    <%= f.label "Describa el temperamento de la mascota" %><br />
+    <%= f.text_area :temperament %>
+  </div>
+  <div class="field">
+    <%= f.label "Le gustan los niños?" %><br />
+    <%= f.check_box :like_kids %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Publicar mascota" %>
+  </div>
+<% end %>
