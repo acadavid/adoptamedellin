@@ -20,6 +20,12 @@ describe Pet do
     pet.should have(1).error_on(:pictures)
   end
 
+  it "is invalid without a pet contact" do
+    pet = FactoryGirl.build(:pet)
+    pet.should_not be_valid
+    pet.should have(1).error_on(:pet_contact)
+  end
+
   it "can have a polymorphic owner" do
     pet = FactoryGirl.build(:pet)
     pet.should respond_to(:owner)

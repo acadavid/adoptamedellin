@@ -34,6 +34,16 @@
   <%= @adoption_pet.like_kids %>
 </p>
 
+<h1>Información del contacto</h1>
+<p>
+  <b>Nombre:</b>
+  <%= @adoption_pet.pet_contact.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @adoption_pet.pet_contact.email %>
+</p>
 
 <%= link_to 'Edit', edit_adoption_pet_path(@adoption_pet) %> |
 <%= link_to 'Back', adoption_pets_path %>

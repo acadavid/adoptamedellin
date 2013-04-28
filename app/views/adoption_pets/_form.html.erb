@@ -72,6 +72,27 @@
     <% end %>
     <%= pet_form.link_to_add "Agregar otra foto", :pictures %>
 
+    <%= pet_form.fields_for :pet_contact_attributes do |contact_form| %>
+      <div class="field">
+        <%= contact_form.label "Nombre" %><br />
+        <%= contact_form.text_field :name %>
+      </div>
+
+      <div class="field">
+        <%= contact_form.label "Email" %><br />
+        <%= contact_form.text_field :email %>
+      </div>
+
+      <div class="field">
+        <%= contact_form.label "Teléfono" %><br />
+        <%= contact_form.text_field :phone %>
+      </div>
+
+      <div class="field">
+        <%= contact_form.label "Celular" %><br />
+      <%= contact_form.text_field :mobile %>
+      </div>
+    <% end %>
   <% end %>
 
   <div class="field">
@@ -90,6 +111,7 @@
     <%= f.label "Le gustan los niños?" %><br />
     <%= f.check_box :like_kids %>
   </div>
+
   <div class="actions">
     <%= f.submit "Publicar mascota" %>
   </div>
