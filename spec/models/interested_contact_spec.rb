@@ -12,4 +12,9 @@ describe InterestedContact do
     contact.should_not be_valid
     contact.should have(1).error_on(:email)
   end
+
+  it "can have a pet" do
+    contact = FactoryGirl.build(:interested_contact)
+    contact.should respond_to(:pet)
+  end
 end

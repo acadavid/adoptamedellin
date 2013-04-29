@@ -9,6 +9,7 @@ class Pet < ActiveRecord::Base
   belongs_to :owner, :polymorphic => :true
   has_many :pictures, :dependent => :destroy
   has_one :pet_contact, :dependent => :destroy
+  has_many :interested_contacts, :dependent => :destroy
 
   accepts_nested_attributes_for :pictures, :pet_contact
 
