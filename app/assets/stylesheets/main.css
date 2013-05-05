@@ -1,9 +1,15 @@
 
+/* Main styles */
+
 body { font-family: 'Nobile', sans-serif; color:#a2a2a2 }
 
-h2, h3, h4{ color:#3e4248; }
+h2, h3, h4{ color:#3e4248; text-align:center }
+
+h2 { font-size: 24px; margin: 0; }
 
 hr { width:100%;}
+
+select { height: 25px}
 
 header hr { margin-top:0; clear:both }
 
@@ -49,4 +55,58 @@ header .span6px  { font-size: 0.85em; color:#3e4248}
 .well .single_post ul li p { display: inline; font-size: 0.8em; margin: 0 0 10px; color:#696d74 }
 
 footer { background:#f0f0f0; padding:50px 0; margin-top: 40px; text-align:center }
+
+/* form basic styles */
+
+.form { width:50%; text-align:center; display:inline-block; float:left}
+
+.form label {display:none}
+
+.form .display_label label, .form .display_label input  { display:inline-block; float:left }
+
+/* New adoption_pet */
+
+.form_background { background:#f4f4f4}
+
+#new_adoption_pet .display_label { width: 14%; text-align:left }
+
+#new_adoption_pet textarea {height:105px; }
+
+#new_adoption_pet div { text-align:center;width:88%; margin:41px auto 0}
+
+#new_adoption_pet div h3 { margin: 0; font-size: 18px; color: #868686; text-align: left;line-height: 24px;}
+
+#new_adoption_pet div hr { margin-top: 9px; border: 1px solid #828282; border-width: 1px 0 0; box-shadow: none}
+
+#new_adoption_pet div fieldset { display:inline; width:41% }
+
+#new_adoption_pet div fieldset label { display:inline;line-height: 43px; color:#868686 }
+
+#new_adoption_pet div fieldset input[type="radio"] { margin: 0 5px; }
+
+#new_adoption_pet div input[type="text"] { width: 73%;margin-left: 17px;  }
+
+#new_adoption_pet .display_label select {width: 54%; float: right; }
+
+#new_adoption_pet .appearance fieldset { clear: left;  width: 50%; float: left; text-align:right }
+
+#new_adoption_pet .appearance fieldset input[type="text"] { width: 79%; } 
+
+#new_adoption_pet .appearance .marcas { width:50%; float:none; clear:none;  }
+
+#new_adoption_pet .appearance .marcas label { display:none }
+
+#new_adoption_pet .appearance .marcas textarea { width: 92%; margin-right: 15px; float: right }
+
+#new_adoption_pet  .location fieldset { width:55% }
+
+#new_adoption_pet  .location input[type="text"] { width: 64% }
+
+#new_adoption_pet  .location fieldset:nth-child(3) { width: 43%; text-align: right; }
+
+#new_adoption_pet  .location fieldset:nth-child(3) input[type="text"] { width: 74% }
+
+
+
+
 
