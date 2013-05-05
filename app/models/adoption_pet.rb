@@ -7,5 +7,5 @@ class AdoptionPet < ActiveRecord::Base
 
   accepts_nested_attributes_for :pet
 
-  delegate :name, :age, :animal, :size, :pictures, :pet_contact, :to => :pet
+  delegate :name, :age, :animal, :size, :pictures, :pet_contact, :interested_contacts, :to => :pet
 end

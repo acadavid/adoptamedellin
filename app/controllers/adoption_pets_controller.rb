@@ -11,6 +11,7 @@ class AdoptionPetsController < ApplicationController
 
   def show
     @adoption_pet = AdoptionPet.find(params[:id])
+    @interested_contact = InterestedContact.new
 
     respond_with @adoption_pet
   end

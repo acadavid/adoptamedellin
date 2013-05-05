@@ -31,4 +31,14 @@ describe Pet do
     pet.should respond_to(:owner)
   end
 
+  it "can have a polymorphic owner" do
+    pet = FactoryGirl.build(:pet)
+    pet.should respond_to(:owner)
+  end
+
+  it "can have interested contacts" do
+    pet = FactoryGirl.build(:pet)
+    pet.should respond_to(:interested_contacts)
+  end
+
 end

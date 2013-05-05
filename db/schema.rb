@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130428012446) do
+ActiveRecord::Schema.define(:version => 20130428013551) do
 
   create_table "adoption_pets", :force => true do |t|
     t.boolean  "vaccines"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20130428012446) do
     t.string   "phone"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "pet_id"
   end
 
   create_table "pet_contacts", :force => true do |t|

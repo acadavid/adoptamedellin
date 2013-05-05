@@ -34,16 +34,24 @@
   <%= @adoption_pet.like_kids %>
 </p>
 
-<h1>Información del contacto</h1>
-<p>
-  <b>Nombre:</b>
-  <%= @adoption_pet.pet_contact.name %>
-</p>
+<div>
+  <button id="adoptme">Adoptame!</button>
+</div>
 
-<p>
-  <b>Email:</b>
-  <%= @adoption_pet.pet_contact.email %>
-</p>
+<div id="adoption_form">
+  <%= form_for([@adoption_pet, @interested_contact]) do |f| %>
+  <%= f.label "Nombre" %>
+  <%= f.text_field :name %>
+
+  <%= f.label "Email" %>
+  <%= f.text_field :email %>
+
+  <%= f.label "Teléfono" %>
+  <%= f.text_field :phone %>
+
+  <%= f.button "Enviar" %>
+  <% end %>
+</div>
 
 <%= link_to 'Edit', edit_adoption_pet_path(@adoption_pet) %> |
 <%= link_to 'Back', adoption_pets_path %>
