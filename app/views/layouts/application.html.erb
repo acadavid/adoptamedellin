@@ -46,6 +46,9 @@
           <li class="active"><%= link_to "Home", root_path  %></li>
           <li><%= link_to "About", "/path2"  %></li>
           <li><%= link_to "Contact", "/path3"  %></li>
+          <% if logged_in? %>
+            <li><%= link_to "Logout", logout_path  %></li>
+          <% end %>
         </ul>
       
         <%= link_to(image_tag(asset_path("adopta_medellin_logo.png"), :width => "320"), root_path) %>

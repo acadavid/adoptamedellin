@@ -3,6 +3,8 @@ class AdoptionPetsController < ApplicationController
 
   respond_to :html
 
+  before_filter :require_login, :only => [:edit, :update, :destroy]
+
   def index
     @pets = AdoptionPet.all
 

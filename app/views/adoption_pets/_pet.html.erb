@@ -15,5 +15,10 @@
         <p><%= image_tag "pin.png", width: "15px" %><%= pet.location %></p>
       </li>
     </ul>
+    <div style="text-align: center">
+    <% if logged_in? %>
+      <%= link_to "Edit", edit_adoption_pet_path(pet)%> || <%= link_to "Delete", adoption_pet_path(pet), method: :delete, data: { confirm: 'Are you sure? There is no go back and pet is gone forever :(' } %>
+    <% end %>
+    </div>
   </div>
 </li>
