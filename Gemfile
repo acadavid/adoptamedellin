@@ -28,7 +28,6 @@ group :test, :development do
 end
 
 gem 'jquery-rails'
-gem "twitter-bootstrap-rails"
 gem "fog", "~> 1.3.1"
 gem 'carrierwave'
 gem "nested_form"
