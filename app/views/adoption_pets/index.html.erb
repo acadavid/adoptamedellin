@@ -1,23 +1,17 @@
-<h1>Listing adoption_pets</h1>
+<header class="clearfix">
+  <div class="span4px">
+    <p>"A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her. "</p>
+  </div>
+  <div class="span6px pull-right">
+    <p>Tienes una mascota que busca un hogar?</p>
+    <%= link_to "CLICK AQUÍ", new_adoption_pet_path, :class => "btn btn-primary" %>
+  </div>
+  <hr />
+</header>
 
-<table>
-  <tr>
-    <th>Perro/Gato</th>
-    <th>Nombre</th>
-    <th></th>
-  </tr>
 
-<% @pets.each do |adoption_pet| %>
-  <tr>
-    <td><%= adoption_pet.pet.animal %></td>
-    <td><%= adoption_pet.pet.name %></td>
-    <td><%= link_to 'Show', adoption_pet %></td>
-    <td><%= link_to 'Edit', edit_adoption_pet_path(adoption_pet) %></td>
-    <td><%= link_to 'Destroy', adoption_pet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Adoption pet', new_adoption_pet_path %>
+<div class="well clearfix">
+  <ul>
+    <%= render partial: "pet", collection: @pets %>
+  </ul>
+</div>

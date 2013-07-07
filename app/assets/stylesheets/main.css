@@ -1,3 +1,4 @@
+@import url('./bootstrap.min.css');
 
 body { font-family: 'Nobile', sans-serif; color:#a2a2a2 }
 
@@ -19,13 +20,19 @@ header .span4px p { font-size:1.1em; text-align:left;line-height: 24px; }
  
 header .span6px.pull-right {text-align: center;margin: 0; background: url('../assets/dog_and_cat_staring.png') center -6px no-repeat; height: 278px; -moz-background-size: 343px; -webkit-background-size: 343px; background-size: 343px; }
 
-.btn { font-family: 'helvetica neue'; background:#33bbb8; font-weight:bold; border:0 }
+.btn { font-family: 'helvetica neue'; background:#33bbb8; font-weight:bold; border:0; ; -moz-transition: all 0.5s; -webkit-transition: all 0.5s; transition: all 0.5s}
 
 header .span6px .btn { padding: 10px 43px; }
 
 header .span6px  { font-size: 0.85em; color:#3e4248}
 
-.well { box-shadow:none; background:#fff; border:none}
+.well { padding-left:0; padding-right:0 ; box-shadow:none; background:#fff; border:none}
+
+.well > ul { text-align:left; margin:0;}
+
+.well > ul > li { display:inline-block; }
+
+.well > ul > li:nth-child(3n+2) { margin:0 33px; }
 
 .well .single_post { display:inline-block; width:263px; margin:32px 0 0; background:#fff; border:1px solid #e1e1e1; }
 
@@ -38,13 +45,11 @@ header .span6px  { font-size: 0.85em; color:#3e4248}
 
 .well .single_post ul li { display:inline;margin: 0 0 0 10px}
 
-.well .single_post .overlay img { padding:10px 0 0 10px }
+.well .single_post .overlay img { padding:10px }
 
-.well .single_post span { text-align:center;margin:10px; height:243px; width:243px; position:absolute; float:left; -moz-opacity:0; -webkit-opacity: 0; opacity: 0; background: #000; -moz-transition: all 0.3s; -webkit-transition: all 0.3s; transition: all 0.3s  }
+.well .single_post  a.overlay  { line-height: 17em;text-decoration:none; display: block; vertical-align: middle; margin-top: 100px; color: #fff; text-align:center;margin:10px; height:243px; width:243px; position:absolute; float:left; -moz-opacity:0; -webkit-opacity: 0; opacity: 0; background: #000; -moz-transition: all 0.3s; -webkit-transition: all 0.3s; transition: all 0.3s  }
 
-.well .single_post span a { text-decoration:none; display: block; vertical-align: middle; margin-top: 100px; color: #fff; }
-
-.well .single_post span:hover { -moz-opacity:0.4;  -webkit-opacity:0.4; opacity:0.4;  }
+.well .single_post  a.overlay:hover { text-decoration:underline ;-moz-opacity:0.4;  -webkit-opacity:0.4; opacity:0.4; }
 
 .well .single_post ul li p { display: inline; font-size: 0.8em; margin: 0 0 10px; color:#696d74 }
 

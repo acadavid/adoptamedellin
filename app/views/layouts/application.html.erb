@@ -43,7 +43,7 @@
     <div class="container">
       <nav class="masthead">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><%= link_to "Home", "/path1"  %></li>
+          <li class="active"><%= link_to "Home", root_path  %></li>
           <li><%= link_to "About", "/path2"  %></li>
           <li><%= link_to "Contact", "/path3"  %></li>
         </ul>
@@ -52,10 +52,8 @@
       </nav>
       <hr />
       
-        <div>
-          <%= bootstrap_flash %>
-          <%= yield %>
-        </div>
+      <%= bootstrap_flash %>
+      <%= yield %>
       
     </div> <!-- /container -->
 
