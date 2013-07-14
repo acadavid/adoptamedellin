@@ -13,151 +13,117 @@
   <% end %>
 
   <%= f.fields_for :pet_attributes, @adoption_pet.pet do |pet_form| %>
-   
-      <div class="main_info">
+  <div class="span5px">
+ 	 <fieldset>
+	 <h3>Contacto</h3>	 
+	 <hr />
+         <%= pet_form.fields_for :pet_contact_attributes do |contact_form| %>
+         	<%= contact_form.label "Nombre" %>
+         	<%= contact_form.text_field :name,  :placeholder => 'Nombre del contacto'  %>
+           	<%= contact_form.label "Email" %>
+           	<%= contact_form.text_field :email, :placeholder => 'Email'  %>
+          	<%= contact_form.label "Teléfono" %>
+           	<%= contact_form.text_field :phone, :placeholder => 'Teléfono fijo' %>
+           	<%= contact_form.label "Celular" %>
+           	<%= contact_form.text_field :mobile, :placeholder => 'Celular' %>
+ 	    <% end %>  
+	 </fieldset>
+  
+      <fieldset id="primary">
         
         <h3>Información básica</h3>
-        
         <hr />
           
-        <fieldset class="display_label">
-          <%= f.label "Perro" %>
+          <%= f.label "Perro", :class => 'display' %>
           <input type="radio" value="Perro" name="animal">
-          <%= f.label "Gato" %>         
+          <%= f.label "Gato", :class => 'display' %>         
           <input type="radio" value="Gato" name="animal">
-        </fieldset>
-
-        <fieldset>
           <%= f.label "Nombre" %>
-          <%= pet_form.text_field :name %>
-        </fieldset>
-
-        <fieldset>
+          <%= pet_form.text_field :name, :placeholder => 'Nombre del animal'  %>
           <%= f.label "Edad" %>
-          <%= pet_form.text_field :age %>
-        </fieldset> 
+          <%= pet_form.text_field :age,:placeholder => 'Edad (aproximada)'  %>
       
-      </div>
+      </fieldset>
       
-      <div class="appearance clearfix"> 
-        
-        <h3>Apariencia</h3>
-        
-        <hr />
-  
-        <fieldset>
-          <%= f.label "Tamaño" %>
-          <%= pet_form.text_field :size %>
-        </fieldset>
-
-        <fieldset>
-          <%= f.label "Raza" %>
-          <%= pet_form.text_field :breed %>
-        </fieldset>
-
-        <fieldset>
-          <%= f.label "Color" %>
-          <%= pet_form.text_field :color %>
-        </fieldset>
-        
-        <fieldset class="marcas">
-          <%= f.label "Marcas" %>
-          <%= pet_form.text_area :marks, :placeholder => 'Marcas distintivas' %>
-        </fieldset>      
-      
-      </div>
-      
-      
-      <div class="location">
+      <fieldset>
         
         <h3>Ubicación</h3>
         
         <hr /> 
         
-        <fieldset>
           <%= f.label "Ubicación" %>
-          <%= pet_form.text_field :location %>
-        </fieldset>
-        
-        <fieldset>
+          <%= pet_form.text_field :location, :placeholder => 'Nombre del animal' %>
           <%= f.label "Notas adicionales" %>
-          <%= pet_form.text_field :notes %>
-        </fieldset>
+          <%= pet_form.text_field :notes, :placeholder => 'Notas adicionales' %>
   
-      </div>
+      </fieldset>
+	  
+	  
+      <fieldset id="look"> 
+        
+        <h3>Apariencia</h3>
+        
+        <hr />
+		
+		<div class="picture">
+		
+    		<%= pet_form.fields_for :pictures, Picture.new do |picture_form|  %>
+    		<%= picture_form.label :file %>
+    		<%= picture_form.file_field :file %>
+     		 <% end %>
+    		<%= pet_form.link_to_add "Agregar otra foto", :pictures, :class => 'add' %>
+     		<%= pet_form.fields_for :pictures, Picture.new do |picture_form|  %>
+     		<%= picture_form.link_to_remove "Eliminar esta foto", :class => 'erase' %>
       
-     <div class="story">
+          <% end %>
+		</div>  
+  
+          <%= f.label "Tamaño" %>
+          <%= pet_form.text_field :size, :placeholder => 'Tamaño' %>
+          <%= f.label "Raza" %>
+          <%= pet_form.text_field :breed, :placeholder => 'Raza' %>
+          <%= f.label "Color" %>
+          <%= pet_form.text_field :color,:placeholder => 'Color' %>
+          <%= f.label "Marcas" %>
+          <%= pet_form.text_area :marks, :placeholder => 'Marcas distintivas' %>
+      
+      </fieldset>
+     
+	</div>	
+	
+	<div class="span5px"> 
+	  
+     <fieldset id="more">
        
-       <h3>Cuéntanos su historia</h3>
+       <h3>Cuéntanos más</h3>
        
        <hr />
        
-        <fieldset>
-           <%= f.label "Historia de la mascota" %>
-           <%= pet_form.text_area :story, :placeholder => 'Historia de la mascota'   %>
-        </fieldset>
-     </div>
-     
-      <div class="pictures">
-        <%= pet_form.fields_for :pictures, Picture.new do |picture_form|  %>
-          <fieldset>
-            <%= picture_form.label :file %>
-            <%= picture_form.file_field :file %>
-          </fieldset>
-          <%= picture_form.link_to_remove "Eliminar esta foto" %>
+          	<%= f.label "Historia de la mascota" %>
+ 		  	<%= pet_form.text_area :story, :placeholder => 'Historia de la mascota'   %>        
 
-            <% end %>
-          <%= pet_form.link_to_add "Agregar otra foto", :pictures %>
-      </div>    
+             
+     </fieldset>
 
-    <div class="health">
+    <fieldset>
       
       <h3>Salud</h3>
       
       <hr />
-      <fieldset>
-        <%= f.label "Está vacunado?" %>
-        <%= f.check_box :vaccines %>
-      </fieldset>
-      <fieldset>
-        <%= f.label "Está esterilizado?" %>
+        <%= f.label "Está vacunado?", :class => 'display' %>
+        <%= f.check_box :vaccines  %>
+        <%= f.label "Está esterilizado?", :class => 'display'  %>
         <%= f.check_box :neutered %>
-      </fieldset>
-      <fieldset>
         <%= f.label "Describa el temperamento de la mascota" %>
         <%= f.text_area :temperament, :placeholder => 'Describa el temperamento de la mascota' %>
-      </fieldset>
-      <fieldset>
-        <%= f.label "Le gustan los niños?" %>
-        <%= f.check_box :like_kids %>
-      </fieldset>
-    </div>
-    
-    <div class="contact_info">    
-        <%= pet_form.fields_for :pet_contact_attributes do |contact_form| %>
-       
-        <fieldset>
-          <%= contact_form.label "Nombre" %>
-          <%= contact_form.text_field :name,  :placeholder => 'Nombre del contacto'  %>
-        </fieldset>
-
-        <fieldset>
-          <%= contact_form.label "Email" %>
-          <%= contact_form.text_field :email, :placeholder => 'Email'  %>
-        </fieldset>
-
-        <fieldset>
-          <%= contact_form.label "Teléfono" %>
-          <%= contact_form.text_field :phone, :placeholder => 'Teléfono fijo' %>
-        </fieldset>
-
-        <fieldset>
-          <%= contact_form.label "Celular" %>
-          <%= contact_form.text_field :mobile, :placeholder => 'Celular' %>
-        </fieldset>
-      <% end %>
-    <% end %>      
+        <%= f.label "Le gustan los niños?", :class => 'display'  %>
+        <%= f.check_box :like_kids %>   
+  
+     </fieldset>
+  	 <% end %>  
       
+	</div>  
+	  
     <%= f.submit "Publicar mascota" %>
 <% end %>
 
