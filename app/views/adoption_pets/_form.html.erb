@@ -1,5 +1,5 @@
 
-  <%= nested_form_for(@adoption_pet, :html => { :multipart => true }) do |f| %>
+  <%= nested_form_for(@adoption_pet, :html => { :multipart => true, :class => "clearfix" }) do |f| %>
     <% if @adoption_pet.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@adoption_pet.errors.count, "error") %> prohibited this adoption_pet from being saved:</h2>
@@ -100,7 +100,7 @@
        <hr />
        
           	<%= f.label "Historia de la mascota" %>
- 		  	<%= pet_form.text_area :story, :placeholder => 'Historia de la mascota'   %>        
+ 		  	<%= pet_form.text_area :story, :placeholder => 'Historia de la mascota', :rows => 3 %>        
 
              
      </fieldset>
@@ -110,20 +110,20 @@
       <h3>Salud</h3>
       
       <hr />
-        <%= f.label "Está vacunado?", :class => 'display' %>
+        <%= f.label "Vacunado?", :class => 'display' %>
         <%= f.check_box :vaccines  %>
-        <%= f.label "Está esterilizado?", :class => 'display'  %>
+        <%= f.label "Esterilizado?", :class => 'display'  %>
         <%= f.check_box :neutered %>
         <%= f.label "Describa el temperamento de la mascota" %>
-        <%= f.text_area :temperament, :placeholder => 'Describa el temperamento de la mascota' %>
         <%= f.label "Le gustan los niños?", :class => 'display'  %>
         <%= f.check_box :like_kids %>   
+        <%= f.text_area :temperament, :placeholder => 'Describa el temperamento de la mascota', :rows => 3 %>
   
      </fieldset>
   	 <% end %>  
       
 	</div>  
 	  
-    <%= f.submit "Publicar mascota" %>
+    <%= f.submit "Publicar mascota", :class => 'btn btn-primary' %>
 <% end %>
 

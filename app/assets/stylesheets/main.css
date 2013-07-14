@@ -17,7 +17,7 @@ ul li { list-style-type:none}
 
 .nav.nav-pills.pull-right { padding:30px 0 }
 
-.nav-pills>.active>a { background-color:#f0f0f0; color:#33bbb8}
+.nav-pills > .active > a { background-color:#f0f0f0; color:#33bbb8}
 
 header .span4px { margin:53px 0 0 }
   
@@ -25,7 +25,7 @@ header .span4px p { font-size:1.1em; text-align:left;line-height: 24px; }
  
 header .span6px.pull-right {text-align: center;margin: 0; background: url('../assets/dog_and_cat_staring.png') center -6px no-repeat; height: 278px; -moz-background-size: 343px; -webkit-background-size: 343px; background-size: 343px; }
 
-.btn { font-family: 'helvetica neue'; background:#33bbb8; font-weight:bold; border:0; ; -moz-transition: all 0.5s; -webkit-transition: all 0.5s; transition: all 0.5s}
+.btn { font-family: 'helvetica neue'; background:#33bbb8; font-weight:bold; border:0; ; -moz-transition: all 0.5s; -webkit-transition: all 0.5s; transition: all 0.5s; padding:10px 43px; text-transform:uppercase;}
 
 header .span6px .btn { padding: 10px 43px; }
 
@@ -72,30 +72,61 @@ footer { background:#f0f0f0; padding:50px 0; margin-top: 40px; text-align:center
 
 #new_adoption_pet input[type="text"],
 #new_adoption_pet input[type="email"],
-#new_adoption_pet input[type="phone"] { width: 46.7%; vertical-align:top;}
+#new_adoption_pet input[type="phone"] { width: 45.7%; vertical-align:top;}
 
-#new_adoption_pet textarea {width: 235px; height: 57px;}
+#new_adoption_pet .span5px { margin:0; }
 
-#new_adoption_pet .span6 { margin:0; }
+#new_adoption_pet .span5px:nth-child(2) { margin-right: 30px; }
 
 #new_adoption_pet h3 { margin: 0; font-size: 13px; color: #5a5a5a; text-align: left;line-height: 24px; font-weight: normal;}
 
 #new_adoption_pet hr { margin:9px 0 11px 0; border: 1px solid #828282; border-width: 1px 0 0; box-shadow: none}
 
-#new_adoption_pet fieldset {display:inline-block; vertical-align:top; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; padding:0 33px;margin-bottom:26px; }
+#new_adoption_pet fieldset {display:inline-block; vertical-align:top; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; padding:0 13px;margin-bottom:26px; }
 
+#new_adoption_pet fieldset div > *, 
 #new_adoption_pet fieldset > * { display:inline-block; }
+#new_adoption_pet fieldset > input[type="checkbox"] { vertical-align:top; margin-right:14px;}
+#new_adoption_pet fieldset input#adoption_pet_like_kids {margin-right:0;}
+#new_adoption_pet fieldset textarea#adoption_pet_temperament {margin-top: 10px;width: 96%;}
 
 #new_adoption_pet fieldset label { display:none;}
 
-#new_adoption_pet fieldset .display { display:inline-block;margin-right: 8px; vertical-align: middle;}
+#new_adoption_pet fieldset .display { display:inline-block;margin-right: 3px; vertical-align: middle;}
 
-#primary input[type="text"] { width:27%; }
+#new_adoption_pet .btn, #back { margin: auto;float: none; display: block; }
 
-#primary input[type="text"]:nth-child(8) {width: 34.5%;}
+#back { text-indent: 14px; }
 
-#primary input[type="radio"] { margin-right:20px;vertical-align: top; margin-top:11px;}
+#primary label { padding-left:25px; background:url(../assets/app_sprites.png) no-repeat left;background-size:23px;}
+
+#primary label[for="adoption_pet_Perro"] { background-position:0 -1px; }
+
+#primary label[for="adoption_pet_Gato"] { background-position:0 -33px;margin-left: 24% }
+
+#primary input[type="text"] { width:45.7%; margin-top:5px; }
+
+#primary input[type="radio"] { margin-right:20px;vertical-align: top; margin:4px 11px 4px 8px;}
 
 #more textarea { width:97%; }
+
+#look textarea, #look  input[type="text"] { float:left; }
+
+#look input[type="text"] { margin-right:7px; }
+
+#look textarea { width:48%; height:110px; float:none; box-sizing: border-box;}
+
+	
+#look input[type="file"] { font-size: 13px; line-height: 26px; }	
+
+#look div  { vertical-align: top; clear:both;}
+
+.erase, .add { display:inline-block; text-indent: -9999em; width:17px; height:17px; background: url(../assets/glyphicons-halflings.png) center no-repeat;-moz-opacity:0.6; -webkit-opacity: 0.6; opacity: 0.6;-moz-transition: all 0.4s; -webkit-transition: all 0.4s; -moz-transition: all 0.4s; -webkit-transition: all 0.4s; transition: all 0.4s}
+
+.erase { background-position:-26px -94px;}
+
+.add { background-position:-3px -94px}
+
+.erase:hover, .add:hover { -moz-opacity:1; -webkit-opacity: 1; opacity: 1;}
 
 	
