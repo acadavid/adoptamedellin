@@ -53,5 +53,8 @@
   <% end %>
 </div>
 
-<%= link_to 'Edit', edit_adoption_pet_path(@adoption_pet) %> |
+<% if logged_in? %>
+  <%= link_to 'Edit', edit_adoption_pet_path(@adoption_pet) %> | <%= link_to "Delete", adoption_pet_path(@adoption_pet), method: :delete, data: { confirm: 'Are you sure? There is no go back and pet is gone forever :(' } %>
+<% end %>
+<br />
 <%= link_to 'Back', adoption_pets_path %>
