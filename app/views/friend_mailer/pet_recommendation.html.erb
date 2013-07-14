@@ -1,0 +1,25 @@
+<table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody">
+  <tr>
+    <td valign="top" class="bodyContent" mc:edit="body_content00">
+      <h1>Hola <%= @friend_name %>!</h1>
+      <h3>Somos AdoptaMedellín.com</h3>
+      Tu amigo <%= @user_name %> ha visto una mascota en nuestro sitio web y te sugiere que la adoptes! A continuación verás el perfíl de la mascota y un enlace para obtener más información de cómo adoptarla.
+    </td>
+  </tr>
+  <tr>
+    <td class="bodyContent" style="padding-top:0; padding-bottom:0;">
+      <img src="<%= @pet.first_picture_file.email.url %>" style="max-width:560px;" id="bodyImage" mc:label="body_image" mc:edit="body_image" mc:allowtext />
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" class="bodyContent" mc:edit="body_content01">
+      <h2><%= @pet.name %> busca hogar!</h2>
+      <h4>Algunos datos de la mascota:</h4>
+      <strong>Edad:</strong> <%= @pet.age || "Desconocida" %><br />
+      <strong>Tamaño:</strong> <%= @pet.size || "Desconocido" %><br />
+      <strong>Ubicación:</strong> <%= @pet.location || "Desconocida" %><br />
+
+      <h2><a href="<%= adoption_pet_url(@pet) %>">Click Aquí si estás interesado en la mascota</a><h2>
+    </td>
+  </tr>
+</table>

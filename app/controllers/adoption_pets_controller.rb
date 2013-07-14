@@ -59,4 +59,13 @@ class AdoptionPetsController < ApplicationController
     flash[:notice] = 'La publicación fue eliminada exitosamente'
     redirect_to adoption_pets_url
   end
+
+  def recommend
+    FriendMailer.pet_recommendation(params[:adoption_pet_id],
+                                    params[:user_name],
+                                    params[:friend_name],
+                                    params[:friend_email]).deliver
+    flash[:success] = "Hemos enviado la mascota a tu amigo! Gracias por ayudar!"
+    redirect_to adoption_pet_url(params[:adoption_pet_id])
+  end
 end

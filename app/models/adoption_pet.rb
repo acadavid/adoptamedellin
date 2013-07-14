@@ -8,4 +8,8 @@ class AdoptionPet < ActiveRecord::Base
   accepts_nested_attributes_for :pet
 
   delegate :name, :age, :animal, :size, :pictures, :pet_contact, :interested_contacts, :gender, :location, :to => :pet
+
+  def first_picture_file
+    pictures.first.file
+  end
 end

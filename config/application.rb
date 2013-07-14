@@ -69,5 +69,9 @@ module Adoptamedellin
       :request_specs => true
       g.fixture_replacement :factory_girl, :dir => "spec/factories"
     end
+
+    config.action_mailer.default_url_options = { host: 'adoptamedellin.com' }
+
+    Rails.application.routes.default_url_options[:host] = 'adoptamedellin.com'
   end
 end

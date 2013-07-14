@@ -53,6 +53,16 @@
   <% end %>
 </div>
 
+<%= form_tag adoption_pet_recommend_path(@adoption_pet) do %>
+  <%= label_tag "name", "Tu nombre" %>
+  <%= text_field_tag "name" %>
+  <%= label_tag "friend_name", "El nombre de tu amigo:" %>
+  <%= text_field_tag "friend_name" %>
+  <%= label_tag "friend_email", "Email de tu amigo:" %>
+  <%= text_field_tag "friend_email" %>
+  <%= submit_tag "Enviar" %>
+<% end %>
+
 <% if logged_in? %>
   <%= link_to 'Edit', edit_adoption_pet_path(@adoption_pet) %> | <%= link_to "Delete", adoption_pet_path(@adoption_pet), method: :delete, data: { confirm: 'Are you sure? There is no go back and pet is gone forever :(' } %>
 <% end %>
