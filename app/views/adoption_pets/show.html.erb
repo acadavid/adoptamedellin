@@ -38,30 +38,35 @@
   <button id="adoptme">Adoptame!</button>
 </div>
 
-<div id="adoption_form">
-  <%= form_for([@adoption_pet, @interested_contact]) do |f| %>
-  <%= f.label "Nombre" %>
-  <%= f.text_field :name %>
+<div id="adoption_form" style="display: none;">
+  <div class="errors"></div>
+  <%= form_for @interested_contact do |f| %>
 
-  <%= f.label "Email" %>
-  <%= f.text_field :email %>
+    <%= hidden_field_tag :adoption_pet_id, @adoption_pet.id %>
+    <%= f.label "Nombre" %>
+    <%= f.text_field :name %>
 
-  <%= f.label "Teléfono" %>
-  <%= f.text_field :phone %>
+    <%= f.label "Email" %>
+    <%= f.text_field :email %>
 
-  <%= f.button "Enviar" %>
+    <%= f.label "Teléfono" %>
+    <%= f.text_field :phone %>
+
+    <%= f.button "Enviar" %>
   <% end %>
 </div>
 
-<%= form_tag adoption_pet_recommend_path(@adoption_pet) do %>
-  <%= label_tag "name", "Tu nombre" %>
-  <%= text_field_tag "name" %>
-  <%= label_tag "friend_name", "El nombre de tu amigo:" %>
-  <%= text_field_tag "friend_name" %>
-  <%= label_tag "friend_email", "Email de tu amigo:" %>
-  <%= text_field_tag "friend_email" %>
-  <%= submit_tag "Enviar" %>
-<% end %>
+<div id="friend_adoption_recommend">
+  <%= form_tag adoption_pet_recommend_path(@adoption_pet) do %>
+    <%= label_tag "name", "Tu nombre" %>
+    <%= text_field_tag "name" %>
+    <%= label_tag "friend_name", "El nombre de tu amigo:" %>
+    <%= text_field_tag "friend_name" %>
+    <%= label_tag "friend_email", "Email de tu amigo:" %>
+    <%= text_field_tag "friend_email" %>
+    <%= submit_tag "Enviar" %>
+  <% end %>
+</div>
 
 <% if logged_in? %>
   <%= link_to 'Edit', edit_adoption_pet_path(@adoption_pet) %> | <%= link_to "Delete", adoption_pet_path(@adoption_pet), method: :delete, data: { confirm: 'Are you sure? There is no go back and pet is gone forever :(' } %>
