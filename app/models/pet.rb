@@ -3,6 +3,7 @@ class Pet < ActiveRecord::Base
 
   validates :animal, :presence => true
   validates :name, :presence => true
+  validates :location, :presence => true
   validate :at_least_one_picture
   validates :pet_contact, :presence => true
 
