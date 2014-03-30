@@ -23,7 +23,7 @@ header .span4px { margin:53px 0 0 }
   
 header .span4px p { font-size:1.1em; text-align:left;line-height: 24px; }
  
-header .span6px.pull-right {text-align: center;margin: 0; background: url('../assets/dog_and_cat_staring.png') center -6px no-repeat; height: 278px; -moz-background-size: 343px; -webkit-background-size: 343px; background-size: 343px; }
+header .span6px.pull-right {text-align: center;margin: 0; background: url(image-path("dog_and_cat_staring.png")) center -6px no-repeat; height: 278px; -moz-background-size: 343px; -webkit-background-size: 343px; background-size: 343px; }
 
 .btn { font-family: 'helvetica neue'; background:#33bbb8; font-weight:bold; border:0; ; -moz-transition: all 0.5s; -webkit-transition: all 0.5s; transition: all 0.5s; padding:10px 43px; text-transform:uppercase;}
 
@@ -98,7 +98,7 @@ footer { background:#f0f0f0; padding:50px 0; margin-top: 40px; text-align:center
 
 #back { text-indent: 14px; }
 
-#primary label { padding-left:25px; background:url(../assets/app_sprites.png) no-repeat left;background-size:23px;}
+#primary label { padding-left:25px; background:url(image-path("app_sprites.png")) no-repeat left;background-size:23px;}
 
 #primary label[for="adoption_pet_Perro"] { background-position:0 -1px; }
 
@@ -121,7 +121,7 @@ footer { background:#f0f0f0; padding:50px 0; margin-top: 40px; text-align:center
 
 #look div  { vertical-align: top; clear:both;}
 
-.erase, .add { display:inline-block; text-indent: -9999em; width:17px; height:17px; background: url(../assets/glyphicons-halflings.png) center no-repeat;-moz-opacity:0.6; -webkit-opacity: 0.6; opacity: 0.6;-moz-transition: all 0.4s; -webkit-transition: all 0.4s; -moz-transition: all 0.4s; -webkit-transition: all 0.4s; transition: all 0.4s}
+.erase, .add { display:inline-block; text-indent: -9999em; width:17px; height:17px; background: url(image-path("glyphicons-halflings.png")) center no-repeat;-moz-opacity:0.6; -webkit-opacity: 0.6; opacity: 0.6;-moz-transition: all 0.4s; -webkit-transition: all 0.4s; -moz-transition: all 0.4s; -webkit-transition: all 0.4s; transition: all 0.4s}
 
 .erase { background-position:-26px -94px;}
 
