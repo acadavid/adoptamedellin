@@ -1,16 +1,21 @@
-<header class="clearfix">
+<section class="clearfix">
   <div class="span4px">
     <p>"A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her. "</p>
   </div>
   <div class="span6px pull-right">
-    <p>Tienes una mascota que busca un hogar?</p>
+    <p>¿Tienes una mascota que busca un hogar?</p>
     <%= link_to "CLICK AQUÍ", new_adoption_pet_path, :class => "btn btn-primary" %>
   </div>
   <hr />
-</header>
+</section>
 
 
 <div class="well clearfix">
+  <h2>Adopta una de estas mascotas</h2>
+  <span>
+    <a href="#"><i class="dog_icon"></i>Sólo Perros</a>
+    <a href="#"><i class="cat_icon"></i>Sólo Gatos</a>
+  </span>
   <ul>
     <%= render partial: "pet", collection: @pets %>
   </ul>

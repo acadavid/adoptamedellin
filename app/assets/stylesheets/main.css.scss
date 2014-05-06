@@ -1,35 +1,35 @@
 
 /* Main styles */
 
-body { font-family: 'Nobile', sans-serif; color:#a2a2a2 }
+body { font-family: 'Nobile', sans-serif; color:#a2a2a2; }
 
-h2, h3, h4{ color:#3e4248; text-align:center }
+h2, h3, h4{ color:#3e4248; text-align:center; }
 
-h2 { font-size: 24px; margin: 0; }
+h2 { font-size: 20px; margin: 0; }
 
 hr { width:100%;}
 
-select { height: 25px}
+select { height: 25px;}
 
-header hr { margin-top:0; clear:both }
+section hr { margin-top:0; clear:both; }
 
-ul li { list-style-type:none}
+ul li { list-style-type:none;}
 
-.nav.nav-pills.pull-right { padding:30px 0 }
+.nav.nav-pills.pull-right { padding:30px 0; }
 
-.nav-pills > .active > a { background-color:#f0f0f0; color:#33bbb8}
+.nav-pills > .active > a { background-color:#f0f0f0; color:#33bbb8;}
 
-header .span4px { margin:53px 0 0 }
+section .span4px { margin:53px 0 0; }
   
-header .span4px p { font-size:1.1em; text-align:left;line-height: 24px; }
+section .span4px p { font-size:1.1em; text-align:left;line-height: 24px; }
  
-header .span6px.pull-right {text-align: center;margin: 0; background: url(image-path("dog_and_cat_staring.png")) center -6px no-repeat; height: 278px; -moz-background-size: 343px; -webkit-background-size: 343px; background-size: 343px; }
+section .span6px.pull-right {text-align: center;margin: 0; background: url(image-path("dog_and_cat_staring.png")) center -6px no-repeat; height: 278px; -moz-background-size: 343px; -webkit-background-size: 343px; background-size: 343px; }
 
 .btn { font-family: 'helvetica neue'; background:#33bbb8; font-weight:bold; border:0; ; -moz-transition: all 0.5s; -webkit-transition: all 0.5s; transition: all 0.5s; padding:10px 43px; text-transform:uppercase;}
 
-header .span6px .btn { padding: 10px 43px; }
+section .span6px .btn { padding: 10px 43px; color: white; margin-top: 0;}
 
-header .span6px  { font-size: 0.85em; color:#3e4248}
+section .span6px  { font-size: 0.85em; color:#3e4248;}
 
 .well { box-shadow:none; background:#fff; border:none; padding-left: 0; padding-right: 0;}
 
@@ -39,34 +39,68 @@ header .span6px  { font-size: 0.85em; color:#3e4248}
 
 .well > ul > li:nth-child(3n+2) { margin:0 33px; }
 
-.well .single_post { display:inline-block; width:263px; margin:32px 0 0; background:#fff; border:1px solid #e1e1e1; }
+.well .single_post { display:inline-block; width:243px; margin:32px 0 0; background:#fff; border:1px solid #e1e1e1; }
 
 .well .single_post:nth-child(2), .well .single_post:nth-child(5), .well .single_post:nth-child(8) { margin: 32px 14px 0; }
 
-
-.well .single_post  h3 { line-height: 24px;margin: 15px 0 0; font-weight: bold;; font-size: 1.5em; color: #3e4248; text-align: center;}
+.well .single_post h3 { line-height: 24px;margin: 15px 0 0; font-weight: bold;; font-size: 1.5em; color: #3e4248; text-align: center; text-transform: capitalize;}
 
 .well .single_post ul { margin: 5px 0; text-align: center; }
 
-.well .single_post ul li { display:inline;margin: 0 0 0 10px}
+.well .single_post ul li { display:inline; margin: 0 0 0 10px;}
 
-.well .single_post .overlay img { padding:10px }
+.well .single_post .overlay { height: 243px; overflow: hidden;}
 
-.well .single_post  a.overlay  { line-height: 17em;text-decoration:none; display: block; vertical-align: middle; margin-top: 100px; color: #fff; text-align:center;margin:10px; height:243px; width:243px; position:absolute; float:left; -moz-opacity:0; -webkit-opacity: 0; opacity: 0; background: #000; -moz-transition: all 0.3s; -webkit-transition: all 0.3s; transition: all 0.3s  }
+.well .single_post a.overlay  { line-height: 17em;text-decoration:none; display: block; vertical-align: middle; color: #fff; text-align:center; height:243px; width:243px; position:absolute; float:left; -moz-opacity:0; -webkit-opacity: 0; opacity: 0; background: #000; -moz-transition: all 0.3s; -webkit-transition: all 0.3s; transition: all 0.3s;  }
 
-.well .single_post  a.overlay:hover { text-decoration:underline ;-moz-opacity:0.4;  -webkit-opacity:0.4; opacity:0.4; }
+.well .single_post a.overlay:hover { text-decoration:underline ;-moz-opacity:0.4;  -webkit-opacity:0.4; opacity:0.4; }
 
-.well .single_post ul li p { display: inline; font-size: 0.8em; margin: 0 0 10px; color:#696d74 }
+.well .single_post ul li p { display: inline; font-size: 0.8em; margin: 0 0 10px; color:#696d74; text-transform: capitalize; }
 
-footer { background:#f0f0f0; padding:50px 0; margin-top: 40px; text-align:center }
+.well .div_left { width: 50%; max-height:435px; float: left; overflow: hidden; margin-bottom: 25px;}
+.well .div_left figure { height:335px; width: 100%; margin: 0; overflow: hidden;}
+
+.well .div_left .small_pics { height: 100px; background: #333333;}
+
+.well h2,h4 {color: #999797;}
+
+.well i { background: url("/assets/app_sprites.png") no-repeat; background-size: 20px; display: inline-block; width: 21px; height: 19px; vertical-align: middle; margin: 0 5px 0 7px;} 
+.well span .dog_icon { background-position: 0 -1px;}
+.well span .cat_icon { background-position: 0 -29px;}
+.well span {display: block; text-align: center; font-size: 13px;}
+.well a { color: #a2a2a2;}
+
+footer { background:#f0f0f0; padding:50px 0; margin-top: 40px; text-align:center; }
+
+.picture { padding: 0 13px;}
+
+.pet_name { text-align: left; text-transform: capitalize; font-size: 25px;}
+
+.div_left label { width: 48%; display: inline-block;}
+.div_left img {width: 100%; }
+.div_right  label { width: 44%; display: inline-block;}
+.div_info { min-height: 410px; width: 46%; padding: 0 0 25px 30px; margin-bottom: 25px; float: left; position: relative; }
+.div_right { height: 245px; width: 46%; padding-left: 30px; float: left; }
+.alert_info {color: #E76B6B; font-style: italic; text-align: center; width: 545px; margin: 0 auto; display: -webkit-box;}
+
+.div_info i { background: url("/assets/social_sprites.png") no-repeat; background-size: 20px; margin: 0; }
+.div_info .facebook_icon { background-position: 0 -1px;}
+.div_info .twitter_icon  { background-position: 0 -29px; }
+.div_info a { margin: 0 5px 10px 0;}
+.div_info ul { margin: 10px 0 0}
+.div_info li { line-height: 25px;}
+.div_left li { line-height: 25px;}
+.div_info #back { position: absolute; bottom: -20px; left: 0;}
+.div_info { font-size: 13px; text-align: justify;}
+.div_info span li { width: 50%; float: left; text-align: left;}
 
 /* form basic styles */
 
-.form { width:50%; text-align:center; display:inline-block; float:left}
+.form { width:50%; text-align:center; display:inline-block; float:left;}
 
-.form label {display:none}
+.form label {display:none;}
 
-.form .display_label label, .form .display_label input  { display:inline-block; float:left }
+.form .display_label label, .form .display_label input  { display:inline-block; float:left; }
 
 /* New adoption_pet */
 
@@ -80,31 +114,31 @@ footer { background:#f0f0f0; padding:50px 0; margin-top: 40px; text-align:center
 
 #new_adoption_pet h3 { margin: 0; font-size: 13px; color: #5a5a5a; text-align: left;line-height: 24px; font-weight: normal;}
 
-#new_adoption_pet hr { margin:9px 0 11px 0; border: 1px solid #828282; border-width: 1px 0 0; box-shadow: none}
+#new_adoption_pet hr { margin:9px 0 11px 0; border: 1px solid #828282; border-width: 1px 0 0; box-shadow: none;}
 
-#new_adoption_pet fieldset {display:inline-block; vertical-align:top; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; padding:0 13px;margin-bottom:26px; }
+#new_adoption_pet fieldset {display:inline-block; vertical-align:top; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; padding:0 13px;margin-bottom:26px; width: 100%;}
 
-#new_adoption_pet fieldset div > *, 
-#new_adoption_pet fieldset > * { display:inline-block; }
-#new_adoption_pet fieldset > input[type="checkbox"] { vertical-align:top; margin-right:14px;}
+/* #new_adoption_pet fieldset div > *, 
+#new_adoption_pet fieldset > * { display:inline-block; vertical-align: inherit;} */
+#new_adoption_pet fieldset > input[type="checkbox"] { vertical-align:top; margin-right:13px;}
 #new_adoption_pet fieldset input#adoption_pet_like_kids {margin-right:0;}
-#new_adoption_pet fieldset textarea#adoption_pet_temperament {margin-top: 10px;width: 96%;}
+#new_adoption_pet fieldset textarea#adoption_pet_temperament,#adoption_pet_pet_attributes_story {width: 96%; height: 60px;}
 
 #new_adoption_pet fieldset label { display:none;}
 
-#new_adoption_pet fieldset .display { display:inline-block;margin-right: 3px; vertical-align: middle;}
+#new_adoption_pet fieldset .display { display:inline-block;margin-right: 2px; vertical-align: middle;}
 
-#new_adoption_pet .btn, #back { margin: auto;float: none; display: block; }
+#new_adoption_pet .btn { margin: 40px 15px 0;float: left; display: block; }
 
-#back { text-indent: 14px; }
+#back { text-indent: 14px; margin: 15px; color: #33bbb8;}
 
 #primary label { padding-left:25px; background:url(image-path("app_sprites.png")) no-repeat left;background-size:23px;}
 
-#primary label[for="adoption_pet_Perro"] { background-position:0 -1px; }
+#primary label[for="adoption_pet_pet_attributes_animal_valueperro"] { background-position:0 -1px; }
 
-#primary label[for="adoption_pet_Gato"] { background-position:0 -33px;margin-left: 24% }
+#primary label[for="adoption_pet_pet_attributes_animal_valuegato"] { background-position:0 -33px;margin-left: 24%; }
 
-#primary input[type="text"] { width:45.7%; margin-top:5px; }
+#primary input[type="text"] { width:45.7%; }
 
 #primary input[type="radio"] { margin-right:20px;vertical-align: top; margin:4px 11px 4px 8px;}
 
@@ -116,17 +150,30 @@ footer { background:#f0f0f0; padding:50px 0; margin-top: 40px; text-align:center
 
 #look textarea { width:48%; height:110px; float:none; box-sizing: border-box;}
 
-	
 #look input[type="file"] { font-size: 13px; line-height: 26px; }	
 
 #look div  { vertical-align: top; clear:both;}
 
-.erase, .add { display:inline-block; text-indent: -9999em; width:17px; height:17px; background: url(image-path("glyphicons-halflings.png")) center no-repeat;-moz-opacity:0.6; -webkit-opacity: 0.6; opacity: 0.6;-moz-transition: all 0.4s; -webkit-transition: all 0.4s; -moz-transition: all 0.4s; -webkit-transition: all 0.4s; transition: all 0.4s}
+#error_explanation { color: #b94a48; margin-bottom: 20px; height: 100px;}
+
+#error_explanation ul li { width: 50%; float: left;}
+
+#error_explanation h2 { color: #b94a48; text-align: left; font-size: 18px; margin-left: 10px; line-height: 30px;}
+
+.errors { color: #b94a48;}
+
+.erase, .add { display:inline-block; text-indent: -9999em; width:17px; height:17px; background: url(image-path("glyphicons-halflings.png")) center no-repeat;-moz-opacity:0.6; -webkit-opacity: 0.6; opacity: 0.6;-moz-transition: all 0.4s; -webkit-transition: all 0.4s; -moz-transition: all 0.4s; -webkit-transition: all 0.4s; transition: all 0.4s;}
 
 .erase { background-position:-26px -94px;}
 
-.add { background-position:-3px -94px}
+.add { background-position:-3px -94px;}
 
 .erase:hover, .add:hover { -moz-opacity:1; -webkit-opacity: 1; opacity: 1;}
 
-	
+.field_with_errors { display: inline; }
+.field_with_errors input {border: 1px solid #b94a48; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #b94a48; -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #b94a48; -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #b94a48;}
+.field_with_errors ::-webkit-input-placeholder {color: #b94a48;}
+.field_with_errors :-ms-input-placeholder {color: #b94a48;}
+.field_with_errors ::-moz-placeholder {color: #550200;}
+.field_with_errors input:focus::-webkit-input-placeholder {color: #a2a2a2;}
+

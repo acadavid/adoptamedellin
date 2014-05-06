@@ -1,75 +1,86 @@
-<p id="notice"><%= notice %></p>
-
-<% @adoption_pet.pictures.each do |pic| %>
-  <%= image_tag pic.file.url %>
-<% end %>
-
-<p>
-  <b>Perro/Gato:</b>
-  <%= @adoption_pet.animal %>
-</p>
-
-<p>
-  <b>Name:</b>
-  <%= @adoption_pet.name %>
-</p>
-
-<p>
-  <b>Vaccines:</b>
-  <%= @adoption_pet.vaccines %>
-</p>
-
-<p>
-  <b>Neutered:</b>
-  <%= @adoption_pet.neutered %>
-</p>
-
-<p>
-  <b>Temperament:</b>
-  <%= @adoption_pet.temperament %>
-</p>
-
-<p>
-  <b>Like kids:</b>
-  <%= @adoption_pet.like_kids %>
-</p>
-
-<div>
-  <button id="adoptme">Adoptame!</button>
+<div class="div_left">
+  <figure>
+    <% @adoption_pet.pictures.each do |pic| %>
+    <%= image_tag pic.file.url %>
+  <% end %>
+  </figure>
+  <div class="small_pics"></div>
 </div>
 
-<div id="adoption_form" style="display: none;">
-  <div class="errors"></div>
-  <%= form_for @interested_contact do |f| %>
+<div class="div_info">
+  <h2 class="pet_name">
+    <%= @adoption_pet.name %>
+  </h2>
+  <a href="#"><i class="facebook_icon"></i>Compartir</a>
+  <a href="#"><i class="twitter_icon"></i>Twittear</a>
 
+  <ul>
+    <span>
+      <li>
+        <p><b>Raza: </b>Criollo</p>
+      </li>
+      <li>
+        <p><b>Edad: </b>2 años</p>
+      </li>
+      <li>
+        <p><b>Vacunas: </b>Sí</p>
+      </li>
+      <li>
+        <p><b>Esterilizado: </b>No</p>
+      </li>
+      <li>
+        <p><b>Amigable con los niños: </b>No</p>
+      </li>
+      <li>
+        <p><b>Ubicación: </b>Prado, Bello</p>      
+      </li>
+    </span>
+    <li>
+      <p><b>Salud y temperamento:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet vulputate tellus quis tempus. Duis urna orci, imperdiet at scelerisque vitae, tincidunt quis mauris.</p>
+    </li>
+    <li>
+      <p><b>Notas Adicionales:</b> Ut euismod fermentum risus, sit amet eleifend sem sollicitudin a. Nulla varius nisi vitae quam euismod cursus. Donec nisl nibh, tempor quis neque id, consequat elementum nisl.</p>
+    </li>
+  </ul>
+  
+  <%= link_to 'Regresar', adoption_pets_path, :id => 'back' %>
+
+</div>
+
+<div id="adoption_form" class="div_left" >
+    <h4>Adopta esta mascota</h4>
+    <%= form_for @interested_contact do |f| %>
     <%= hidden_field_tag :adoption_pet_id, @adoption_pet.id %>
-    <%= f.label "Nombre" %>
+    <%= f.label "Tu nombre:" %>
     <%= f.text_field :name %>
-
-    <%= f.label "Email" %>
+    <%= f.label "Tu E-mail:" %>
     <%= f.text_field :email %>
-
-    <%= f.label "Teléfono" %>
+    <%= f.label "Tu teléfono:" %>
     <%= f.text_field :phone %>
+    <%= f.button "Adoptar", :class => 'btn btn-primary pull-right' %>
+      <div class="errors"></div>
 
-    <%= f.button "Enviar" %>
   <% end %>
 </div>
 
-<div id="friend_adoption_recommend">
-  <%= form_tag adoption_pet_recommend_path(@adoption_pet) do %>
-    <%= label_tag "name", "Tu nombre" %>
+<div id="friend_adoption_recommend" class="div_right">
+    <h4>Sugiere esta mascota a un amigo</h4>
+    <%= form_tag adoption_pet_recommend_path(@adoption_pet) do %>
+    <%= label_tag "name", "Tu nombre:" %>
     <%= text_field_tag "name" %>
     <%= label_tag "friend_name", "El nombre de tu amigo:" %>
     <%= text_field_tag "friend_name" %>
-    <%= label_tag "friend_email", "Email de tu amigo:" %>
+    <%= label_tag "friend_email", "E-mail de tu amigo:" %>
     <%= text_field_tag "friend_email" %>
-    <%= submit_tag "Enviar" %>
+    <%= submit_tag "Compartir", :class => 'btn btn-primary pull-right blue' %>
   <% end %>
 </div>
+
 
 <% if logged_in? %>
   <%= link_to 'Edit', edit_adoption_pet_path(@adoption_pet) %> | <%= link_to "Delete", adoption_pet_path(@adoption_pet), method: :delete, data: { confirm: 'Are you sure? There is no go back and pet is gone forever :(' } %>
 <% end %>
 <br />
-<%= link_to 'Back', adoption_pets_path %>
+
+<p class="alert_info">Recuerda, al dar click en adoptar te comprometes a adsf y qwerty, asegurate de estar de acuerdo con todos los miembros de tu familia antes de iniciar el proceso de adopción.</p>
+

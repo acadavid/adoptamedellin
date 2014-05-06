@@ -518,6 +518,12 @@ p {
   font-weight: 200;
   line-height: 30px;
 }
+.btn.blue{
+  background: #7d90ab;
+}
+.btn.blue:hover{
+  background: #40598F;
+}
 small {
   font-size: 85%;
 }
@@ -640,7 +646,7 @@ h4 small {
 ul,
 ol {
   padding: 0;
-  margin: 0 0 10px 25px;
+  margin: 0 0 10px 15px;
 }
 ul ul,
 ul ol,
@@ -1143,7 +1149,7 @@ table th[class*="span"],
   background-color: #c4e3f3;
 }
 form {
-  margin: 0 0 20px;
+  margin: 20px 0;
 }
 fieldset {
   padding: 0;
@@ -1181,8 +1187,8 @@ textarea {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 label {
-  display: block;
-  margin-bottom: 5px;
+  display: none;
+  margin-bottom: 10px;
 }
 select,
 textarea,
@@ -1990,6 +1996,7 @@ legend + .control-group {
   *zoom: 1;
   padding: 4px 12px;
   margin-bottom: 0;
+  margin-top: 10px;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
