@@ -9,7 +9,12 @@
     <h3><%= pet.name %></h3>
     <ul>
       <li>
-        <p><%= image_tag "footprint.png", width: "15px" %><%= pet.gender %></p>
+        <i class="dog_icon"></i>
+        <i class="cat_icon" style="display: none;"></i>
+      </li>
+      <li>
+        <i class="male_icon"></i>
+        <i class="female_icon" style="display: none;"></i>
       </li>
       <li>
         <p><%= image_tag "pin.png", width: "15px" %><%= pet.location %></p>
