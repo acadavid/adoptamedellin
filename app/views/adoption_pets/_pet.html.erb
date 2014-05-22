@@ -7,19 +7,22 @@
       <% end %>
     </div>
     <h3><%= pet.name %></h3>
+
     <ul>
       <li>
-        <i class="dog_icon"></i>
-        <i class="cat_icon" style="display: none;"></i>
+        <i class="male_icon"></i><p>Macho</p>
       </li>
       <li>
-        <i class="male_icon"></i>
-        <i class="female_icon" style="display: none;"></i>
+        <i class="age_icon"></i><p>2 Años</p>
       </li>
       <li>
-        <p><%= image_tag "pin.png", width: "15px" %><%= pet.location %></p>
+        <i class="date_icon"></i><p>04/05/14</p>
+      </li>
+      <li>
+        <i class="ubication_icon"></i><p>Bello</p>
       </li>
     </ul>
+
     <div style="text-align: center">
     <% if logged_in? %>
       <%= link_to "Edit", edit_adoption_pet_path(pet)%> || <%= link_to "Delete", adoption_pet_path(pet), method: :delete, data: { confirm: 'Are you sure? There is no go back and pet is gone forever :(' } %>

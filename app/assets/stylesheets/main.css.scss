@@ -43,11 +43,11 @@ section .span6px  { font-size: 0.85em; color:#3e4248;}
 
 .well .single_post:nth-child(2), .well .single_post:nth-child(5), .well .single_post:nth-child(8) { margin: 32px 14px 0; }
 
-.well .single_post h3 { line-height: 24px;margin: 15px 0 0; font-weight: bold;; font-size: 1.5em; color: #3e4248; text-align: center; text-transform: capitalize;}
+.well .single_post h3 { line-height: 24px;margin: 0; font-weight: 200; font-size: 1.5em; color: #fff; text-align: left; text-transform: capitalize; background: #FA474F; padding: 10px 15px;}
 
-.well .single_post ul { margin: 5px 0; text-align: center; }
+.well .single_post ul { margin: 10px 0; text-align: center; height: 50px;}
 
-.well .single_post ul li { display:inline; }
+.well .single_post ul li { display:inline-block; width: 22%;}
 
 .well .single_post .overlay { height: 243px; overflow: hidden;}
 
@@ -55,7 +55,14 @@ section .span6px  { font-size: 0.85em; color:#3e4248;}
 
 .well .single_post a.overlay:hover { text-decoration:underline ;-moz-opacity:0.4;  -webkit-opacity:0.4; opacity:0.4; }
 
-.well .single_post ul li p { display: inline; font-size: 0.8em; margin: 0 0 10px; color:#696d74; text-transform: capitalize; }
+.well .single_post ul li p { display: inline-block; font-size: 0.8em; margin: 3px 0 10px; color:#696d74; text-transform: capitalize; }
+
+.well .single_post i { background: url("/assets/thumbnail_icon.png") no-repeat; background-size: 65px; display: inline-block; width: 30px; height: 30px; vertical-align: middle; margin: 0 5px 0 7px;} 
+
+.well .single_post ul li .male_icon { background-position: -34px 1px;}
+.well .single_post ul li .age_icon { background-position: -2px -95px;}
+.well .single_post ul li .date_icon { background-position: 1px -63px;}
+.well .single_post ul li .ubication_icon { background-position: 1px -30px;}
 
 .well .div_left { width: 50%; max-height:435px; float: left; overflow: hidden; margin-bottom: 25px;}
 .well .div_left figure { height:335px; width: 100%; margin: 0; overflow: hidden;}
@@ -64,12 +71,10 @@ section .span6px  { font-size: 0.85em; color:#3e4248;}
 
 .well h2,h4 {color: #999797;}
 
-.well i { background: url("/assets/specie_sprites.png") no-repeat; background-size: 40px; display: inline-block; width: 25px; height: 20px; vertical-align: middle; margin: 0 5px 0 7px;} 
 .well span .dog_icon { background-position: -20px 0;}
 .well span .cat_icon { background-position: -20px -28px;}
 .well span {display: block; text-align: center; font-size: 13px;}
 .well a:hover { color: #33bbb8;}
-.single_post ul li i { background-position: 6px 0; background-size: 35px;}
 .single_post .cat_icon {background-position: 2px -23px;}
 .well .arrow i {background: url("/assets/glyphicons-halflings-white.png") no-repeat #33bbb8; border-radius: 10px; margin-top: -2px; width: 19px;}
 .well .arrow .previous { background-position: -429px -70px;}
