@@ -1,0 +1,54 @@
+@media screen and (max-width: 320px){
+	body{
+		padding: 0;
+	}
+	.well{
+		padding-top: 10px;
+	}
+	.well > ul > li:nth-child(3n+2) {
+		margin: 0;
+	}
+	header.masthead{
+		display: inline-block;
+		height: 215px
+	}
+	header a img {
+		position: absolute;
+		top: 15px;
+		left: 20px;
+		width: 87%;
+	}
+	nav{
+		margin-top: 110px;
+	}	
+	nav ul li {
+		width: 305px;
+		text-align: center;
+	}
+	.nav.nav-pills.pull-right{
+		padding: 0;
+	}
+	hr{
+		margin: 5px 0;
+	}	
+	section .span4px{
+		margin: 10px 0 0;
+		padding: 15px;
+	}
+	section .span4px p{
+		text-align: center;
+		margin-bottom: 25px;
+	}
+	section .span6px.pull-right{
+		background-position: center 20px;
+		background-size: 240px;
+		height: 215px;
+	}
+	.well .single_post, .well .single_post a.overlay, .well .single_post img{
+		width: 300px;
+	}
+	.well .single_post ul li{
+		width: 54px;
+		margin-right: 15px;
+	}
+}

@@ -31,9 +31,9 @@ section .span6px .btn { padding: 10px 43px; color: white; margin-top: 0;}
 
 section .span6px  { font-size: 0.85em; color:#3e4248;}
 
-.well { box-shadow:none; background:#fff; border:none; padding: 30px 0 0 0; position: relative;}
+.well { box-shadow:none; background:#fff; border:none; padding: 30px 0 0; position: relative;}
 
-.well > ul { text-align:left; margin:0;}
+.well > ul { text-align: center; margin: 0;}
 
 .well > ul > li { display:inline-block; }
 
@@ -55,14 +55,16 @@ section .span6px  { font-size: 0.85em; color:#3e4248;}
 
 .well .single_post a.overlay:hover { text-decoration:underline ;-moz-opacity:0.4;  -webkit-opacity:0.4; opacity:0.4; }
 
-.well .single_post ul li p { display: inline-block; font-size: 0.8em; margin: 3px 0 10px; color:#696d74; text-transform: capitalize; }
+.well .single_post ul li p { display: inline-block; font-size: 0.8em; margin-top: 3px; color:#c2c2c2; text-transform: capitalize; }
 
-.well .single_post i { background: url("/assets/thumbnail_icon.png") no-repeat; background-size: 65px; display: inline-block; width: 30px; height: 30px; vertical-align: middle; margin: 0 5px 0 7px;} 
+.well i { background: url("/assets/sprites.png") no-repeat; display: inline-block; vertical-align: middle;} 
 
-.well .single_post ul li .male_icon { background-position: -34px 1px;}
-.well .single_post ul li .age_icon { background-position: -2px -95px;}
-.well .single_post ul li .date_icon { background-position: 1px -63px;}
-.well .single_post ul li .ubication_icon { background-position: 1px -30px;}
+.well .single_post i { background-size: 158px; width: 30px; height: 30px;} 
+.well .single_post ul li .male_icon { background-position: -52px -163px;}
+.well .single_post ul li .female_icon { background-position: -10px -163px;}
+.well .single_post ul li .age_icon { background-position: -15px -269px;}
+.well .single_post ul li .date_icon { background-position: -13px -233px;}
+.well .single_post ul li .ubication_icon { background-position: -10px -199px;}
 
 .well .div_left { width: 50%; max-height:435px; float: left; overflow: hidden; margin-bottom: 25px;}
 .well .div_left figure { height:335px; width: 100%; margin: 0; overflow: hidden;}
@@ -82,7 +84,6 @@ section .span6px  { font-size: 0.85em; color:#3e4248;}
 .well .left { position: absolute; left: 0; top: -5px;}
 .well .right { position: absolute; right: 0; top: -5px;}
 
-
 footer { background:#f0f0f0; padding:50px 0; margin-top: 40px; text-align:center; }
 
 .picture { padding: 0 13px;}
@@ -93,18 +94,17 @@ footer { background:#f0f0f0; padding:50px 0; margin-top: 40px; text-align:center
 
 .div_left label { width: 48%; display: inline-block;}
 .div_left img {width: 100%; }
-.div_right  label { width: 44%; display: inline-block;}
+.div_right label { width: 44%; display: inline-block;}
 .div_info { min-height: 410px; width: 46%; padding: 0 0 25px 30px; margin-bottom: 25px; float: left; position: relative; }
 .div_right { height: 245px; width: 46%; padding-left: 30px; float: left; }
 .alert_info {color: #E76B6B; font-style: italic; text-align: center; width: 545px; margin: 0 auto; display: -webkit-box;}
 
-.div_info i { background: url("/assets/media_sprites.png") no-repeat; background-size: 30px; margin: 0; }
-.contact i { background: url("/assets/media_sprites.png") no-repeat; background-size: 30px; margin: 0; }
-.div_info .facebook_icon { background-position: 0 -1px;}
-.contact .facebook_icon { background-position: -5px -2px;}
-.div_info .twitter_icon  { background-position: 0 -21px; }
-.contact .twitter_icon  { background-position: -5px -21px; margin-left: 10px;}
-.contact .mail_icon { background-position: -5px -41px;}
+.contact i, .div_info i { background-size: 95px; width: 18px; height: 18px; margin-right: 5px;}
+.contact .facebook_icon, .div_info .facebook_icon { background-position: -6px -77px;}
+.contact .twitter_icon, .div_info .twitter_icon  { background-position: -30px -76px;}
+.contact .twitter_icon  { margin-left: 10px;}
+.contact .mail_icon, .div_info .mail_icon { background-position: -52px -77px;}
+
 .div_info a { margin: 0 5px 10px 0;}
 .div_info ul { margin: 0;}
 .div_info li { line-height: 25px;}
@@ -151,11 +151,11 @@ footer { background:#f0f0f0; padding:50px 0; margin-top: 40px; text-align:center
 
 #back { text-indent: 14px; margin: 15px; color: #33bbb8;}
 
-#primary label { padding-left:25px; background:url(image-path("app_sprites.png")) no-repeat left;background-size:23px;}
+#primary label { padding-left:25px; background:url(image-path("/assets/sprites.png")) no-repeat left; background-size: 100px;}
 
-#primary label[for="adoption_pet_pet_attributes_animal_valueperro"] { background-position:0 -1px; }
+#primary label[for="adoption_pet_pet_attributes_animal_valueperro"] { background-position: -55px -25px; }
 
-#primary label[for="adoption_pet_pet_attributes_animal_valuegato"] { background-position:0 -33px;margin-left: 24%; }
+#primary label[for="adoption_pet_pet_attributes_animal_valuegato"] { background-position: -55px -46px; margin-left: 24%; }
 
 #primary input[type="text"] { width:45.7%; }
 
@@ -181,11 +181,11 @@ footer { background:#f0f0f0; padding:50px 0; margin-top: 40px; text-align:center
 
 .errors { color: #b94a48;}
 
-.erase, .add { display:inline-block; text-indent: -9999em; width:17px; height:17px; background: url(image-path("glyphicons-halflings.png")) center no-repeat;-moz-opacity:0.6; -webkit-opacity: 0.6; opacity: 0.6;-moz-transition: all 0.4s; -webkit-transition: all 0.4s; -moz-transition: all 0.4s; -webkit-transition: all 0.4s; transition: all 0.4s;}
+.erase, .add { display:inline-block; text-indent: -9999em; width:17px; height:17px; background: url(image-path("/assets/sprites.png")) center no-repeat; background-size: 90px; -moz-opacity:0.6; -webkit-opacity: 0.6; opacity: 0.6;-moz-transition: all 0.4s; -webkit-transition: all 0.4s; -moz-transition: all 0.4s; -webkit-transition: all 0.4s; transition: all 0.4s;}
 
-.erase { background-position:-26px -94px;}
+.erase { background-position:-6px -41px;}
 
-.add { background-position:-3px -94px;}
+.add { background-position:-6px -23px;}
 
 .erase:hover, .add:hover { -moz-opacity:1; -webkit-opacity: 1; opacity: 1;}
 
