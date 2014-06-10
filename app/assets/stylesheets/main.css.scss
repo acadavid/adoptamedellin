@@ -9,17 +9,21 @@ h2 { font-size: 20px; margin: 0; }
 
 hr { width:100%;}
 
+header { width: 100%; height: auto; display: inline-block;}
+
 select { height: 25px;}
 
 section hr { margin-top:0; clear:both; }
 
 ul li { list-style-type:none;}
 
-.nav.nav-pills.pull-right { padding:30px 0; }
+.nav.nav-pills.pull-right { padding: 15% 0 0 }
 
 .nav-pills > .active > a { background-color:#f0f0f0; color:#33bbb8;}
 
-section .span4px { margin:53px 0 0; }
+nav { display: inline-block; float: right;}
+
+section .span4px { margin: 5% 0 0; }
   
 section .span4px p { font-size:1.1em; text-align:left;line-height: 24px; }
  
@@ -33,38 +37,34 @@ section .span6px  { font-size: 0.85em; color:#3e4248;}
 
 .well { box-shadow:none; background:#fff; border:none; padding: 30px 0 0; position: relative;}
 
-.well > ul { text-align: center; margin: 0;}
+.well > ul { text-align: center; margin: 0; width: 100%;}
 
-.well > ul > li { display:inline-block; }
+.well > ul > li { display:inline-block; width: 30%; margin: 0 1%;}
 
-.well > ul > li:nth-child(3n+2) { margin:0 33px; }
+.container { width: 70%;}
 
-.well .single_post { display:inline-block; width:243px; margin:32px 0 0; background:#fff; border:1px solid #e1e1e1; }
+.well .overlay img { width: 100%;}
 
-.well .single_post:nth-child(2), .well .single_post:nth-child(5), .well .single_post:nth-child(8) { margin: 32px 14px 0; }
+.well .single_post { position:relative; display:inline-block; width: 90%; margin:32px auto 0; vertical-align: top; border-radius: 3px; overflow: hidden;}
 
-.well .single_post h3 { line-height: 24px;margin: 0; font-weight: 200; font-size: 1.5em; color: #fff; text-align: left; text-transform: capitalize; background: #FA474F; padding: 10px 15px;}
+.well .single_post h3 { line-height: 20px; position: absolute; bottom: 0; left: 0; margin: 0; font-weight: 200; font-size: 1.2em; color: #fff; background: rgba(99, 97, 97, 0.59); width: 92%; text-align: left; text-transform: capitalize; padding: 4%;}
 
 .well .single_post ul { margin: 10px 0; text-align: center; height: 50px;}
 
-.well .single_post ul li { display:inline-block; width: 22%;}
+.well .single_post ul li { display:inline-block; width: 21%;}
 
-.well .single_post .overlay { height: 243px; overflow: hidden;}
+.well .single_post .overlay { overflow: hidden;}
 
-.well .single_post a.overlay  { line-height: 17em;text-decoration:none; display: block; vertical-align: middle; color: #fff; text-align:center; height:243px; width:243px; position:absolute; float:left; -moz-opacity:0; -webkit-opacity: 0; opacity: 0; background: #000; -moz-transition: all 0.3s; -webkit-transition: all 0.3s; transition: all 0.3s;  }
+.well .single_post a.overlay  { height: 100%; line-height: 17em;text-decoration:none; display: block; vertical-align: middle; color: #fff; text-align:center;  width:100%; position:absolute; float:left; -moz-opacity:0; -webkit-opacity: 0; opacity: 0; background: #000; -moz-transition: all 0.3s; -webkit-transition: all 0.3s; transition: all 0.3s;  }
 
 .well .single_post a.overlay:hover { text-decoration:underline ;-moz-opacity:0.4;  -webkit-opacity:0.4; opacity:0.4; }
 
-.well .single_post ul li p { display: inline-block; font-size: 0.8em; margin-top: 3px; color:#c2c2c2; text-transform: capitalize; }
+.well span { width: 50px; height: 50px; position: absolute; right: 7px; bottom: 5px; border-radius: 50%; background: #fff;}
+.well .single_post span p { color:#000; width: 35px; margin: 10% auto; line-height: 130%; }
+.well .single_post span p b { font-size: 25px;}
+
 
 .well i { background: url("/assets/sprites.png") no-repeat; display: inline-block; vertical-align: middle;} 
-
-.well .single_post i { background-size: 158px; width: 30px; height: 30px;} 
-.well .single_post ul li .male_icon { background-position: -52px -163px;}
-.well .single_post ul li .female_icon { background-position: -10px -163px;}
-.well .single_post ul li .age_icon { background-position: -15px -269px;}
-.well .single_post ul li .date_icon { background-position: -13px -233px;}
-.well .single_post ul li .ubication_icon { background-position: -10px -199px;}
 
 .well .div_left { width: 50%; max-height:435px; float: left; overflow: hidden; margin-bottom: 25px;}
 .well .div_left figure { height:335px; width: 100%; margin: 0; overflow: hidden;}
@@ -200,6 +200,6 @@ footer { background:#f0f0f0; padding:50px 0; margin-top: 40px; text-align:center
 .grill_48 { width: 48%; height: auto; display: inline-block; float: left; margin-right: 17px;}
 .about { height: 215px; }
 .about h2 {text-align: left; margin: 10px 0; color: #474747;}
-.contact { width: 100%; height: 75px; background: rgba(166, 30, 30, 0.09); margin-top: 20px; color: #9B9B9B;}
+.contact { width: 100%; height: auto; display: inline-block; background: rgba(166, 30, 30, 0.09); padding-bottom: 10px; margin-top: 20px; color: #9B9B9B; clear: both;}
 .contact p { margin: 0 0 2px; }
 .contact span {text-align: left; margin: 15px 15px 0;}
