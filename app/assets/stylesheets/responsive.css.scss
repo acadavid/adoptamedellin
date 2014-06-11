@@ -1,4 +1,7 @@
 @media screen and (max-width: 1000px){
+	/***************
+	home styles
+	***************/
 	header a img {
 		width: 45%;
 		margin-top: 10px;
@@ -18,22 +21,51 @@
 	section .span4px{
 		padding: 0;
 	}
-	.well span{
+	.well .single_post span{
 		width: 45px;
 		height: 45px;		
 	}
 	.well .single_post span p b{
-		font-size: 20px;}
+		font-size: 20px;
+	}
+	/***************
+	new adoption pet styles
+	***************/
+	#primary input[type="text"], #new_adoption_pet input[type="text"], #new_adoption_pet input[type="email"], #new_adoption_pet input[type="phone"]{
+		width: 44%;
+	}	
 }
 
 @media screen and (max-width: 850px) {
+	/***************
+	home styles
+	***************/
 	.container{
 		width: 80%;
 	}
+	/***************
+	new adoption pet styles
+	***************/
+	#primary input[type="text"], #new_adoption_pet input[type="text"], #new_adoption_pet input[type="email"], #new_adoption_pet input[type="phone"]{
+		width: 42%;
+	}
+	#new_adoption_pet .btn{
+		margin: 0;
+	}
+	/***************
+	contact styles
+	***************/
+	.banner{
+		background-size: 420px;
+		height: 160px
+	}	
 }
 
 
 @media screen and (max-width: 770px) {
+	/***************
+	home styles
+	***************/
 	section .span4px p{
 		text-align: center;
 		margin-bottom: 25px;
@@ -46,16 +78,35 @@
 		width: 49%;
 		margin: 0;
 	}
-	.well span{
+	.well .single_post span{
 		width: 55px;
 		height: 55px;		
 	}
 	.well .single_post span p b {
 		font-size: 20px;
 	}
+	/***************
+	new adoption pet styles
+	***************/
+	#primary label[for="adoption_pet_pet_attributes_animal_valuegato"]{
+		margin-left: 10%;
+	}
+	/***************
+	contact styles
+	***************/
+	.contact .grill_48 span a { 
+		display: block;
+		margin: 3px 0;
+	}
+	.contact .twitter_icon {
+		margin: 0;
+	}
 }
 
 @media screen and (max-width: 600px) {
+	/***************
+	home styles
+	***************/
 	header a img {
 		width: 70%;
 		display: block;
@@ -79,9 +130,41 @@
 	.container{
 		width: 100%;
 	}
+	/***************
+	new adoption pet styles
+	***************/
+	#new_adoption_pet input[type="text"], #new_adoption_pet input[type="email"], #new_adoption_pet input[type="phone"]{
+		width: 45%;
+	}	
+	#new_adoption_pet .btn{
+		margin: 0 auto 15px;
+		float: none;
+	}
+	.well .span5px, #new_adoption_pet input[type="text"], #new_adoption_pet input[type="email"], #new_adoption_pet input[type="phone"]{
+		width: 96%;
+	}
+	/***************
+	contact styles
+	***************/
+	.grill_48{
+		width: 100%;
+	}
+	.banner{
+		display: none;
+	}
+	.contact .grill_48 span a { 
+		display: inline;
+	}
+	.contact .twitter_icon{
+		margin: 0 5px 0 10px;
+	}
+
 }
 
 @media screen and (max-width: 400px){
+	/***************
+	home styles
+	***************/
 	body{
 		padding: 0;
 	}
@@ -106,7 +189,7 @@
 	section .span6px.pull-right{
 		height: 100px;
 	}
-	.well span{
+	.well .single_post span{
 		width: 55px;
 		height: 55px;		
 	}
@@ -114,6 +197,18 @@
 		width: 70%;
 		font-size: 15px;
 		margin-top: 8px;
+	}
+	/***************
+	contact styles
+	***************/
+	.well{
+		padding: 0 10px;
+	}
+	.about{
+		padding: 0 5px;
+	}
+	.contact .grill_48 span{
+		margin: 15px 0 0 3%;
 	}
 }
 
