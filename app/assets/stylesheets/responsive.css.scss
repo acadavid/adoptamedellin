@@ -33,7 +33,49 @@
 	***************/
 	#primary input[type="text"], #new_adoption_pet input[type="text"], #new_adoption_pet input[type="email"], #new_adoption_pet input[type="phone"]{
 		width: 44%;
-	}	
+	}
+	/***************
+	single_pet page styles
+	***************/
+	.well .div_left{
+		width: 100%;
+		padding-right: 0;
+	}
+	.well .div_left figure{
+		margin-top: 35px;
+		max-height: 500px;
+	}
+	.well .div_info{
+		width: 100%;
+		padding: 0 10px 0 0;
+		margin: 15px 0 40px;
+		height: auto;
+	}
+	.well .div_info #back{
+		margin: -10px 0;
+	}
+	.well .div_info .social{
+		bottom: -30px;
+	}
+	#adoption_form{
+		width: 50%;
+		padding-right: 10px;
+	}
+	input{
+		width: 96%;
+	}
+	.alert_info{
+		width: 98%;
+		margin: 10px auto 0;
+		display: inline-block;
+	}
+	h4{
+		height: 40px;
+		padding-bottom: 0;
+	}
+	.well .div_right label{
+		width: auto;
+	}
 }
 
 @media screen and (max-width: 850px) {
@@ -103,7 +145,7 @@
 	}
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 550px) {
 	/***************
 	home styles
 	***************/
@@ -111,6 +153,7 @@
 		width: 70%;
 		display: block;
 		margin: 0 auto 5%;
+		float: none;
 	}
 	nav{
 		margin: 0 auto;
@@ -130,6 +173,10 @@
 	.container{
 		width: 100%;
 	}
+	.well .single_post span{
+		width: 45px;
+		height: 45px;		
+	}
 	/***************
 	new adoption pet styles
 	***************/
@@ -142,6 +189,10 @@
 	}
 	.well .span5px, #new_adoption_pet input[type="text"], #new_adoption_pet input[type="email"], #new_adoption_pet input[type="phone"]{
 		width: 96%;
+	}
+	#new_adoption_pet .btn{
+		float: none;
+		width: 92%;
 	}
 	/***************
 	contact styles
@@ -158,7 +209,41 @@
 	.contact .twitter_icon{
 		margin: 0 5px 0 10px;
 	}
-
+	.about h2{
+		text-align: center;
+	}
+	.about p{
+		text-align: justify;
+	}
+	/***************
+	single_pet page styles
+	***************/	
+	.well .left{
+		left: 10px;
+		top: 4px;
+	}
+	.well .right{
+		right: 10px;
+		top: 4px;
+	}
+	.well #adoption_form{
+		width: 100%;
+	}
+	.well .div_right{
+		width: 100%;
+		padding: 0;
+		margin-top: 15px;
+	}	
+	.div_left .btn, .div_right .btn{
+		float: none;
+		width: 98%;
+		margin: 10px auto 10px;
+		display: inherit;
+	}	
+	input {
+		width: 94%;
+		margin: 5px 1% 5px;
+	}	
 }
 
 @media screen and (max-width: 400px){
@@ -188,6 +273,7 @@
 	}
 	section .span6px.pull-right{
 		height: 100px;
+		background: none;
 	}
 	.well .single_post span{
 		width: 55px;

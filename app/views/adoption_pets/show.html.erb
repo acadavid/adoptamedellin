@@ -3,9 +3,7 @@
 
 <div class="div_left">
   <figure>
-    <% @adoption_pet.pictures.each do |pic| %>
-    <%= image_tag pic.file.url %>
-  <% end %>
+    <%= image_tag @adoption_pet.pictures.first.file.url %>
   </figure>
   <div class="small_pics"></div>
 </div>
@@ -31,15 +29,9 @@
       </li>
       <li>
         <p><b>Esterilizado: </b>No</p>
-      </li>
-      <li>
-        <p><b>Amigable con los niños: </b>No</p>
-      </li>
+      </li>    
       <li>
         <p><b>Ubicación: </b>Prado, Bello</p>      
-      </li>
-      <li>
-        <p><b>Publicación: </b>04/04/04</p>      
       </li>
     </span>
     <li>
