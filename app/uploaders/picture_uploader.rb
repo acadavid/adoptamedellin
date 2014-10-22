@@ -1,7 +1,7 @@
 class PictureUploader < CarrierWave::Uploader::Base
   include CarrierWave::RMagick
 
-  storage :fog
+  storage Rails.application.config.carrier_wave_storage
 
   version :thumbnail do
     #process :resize_and_pad => [243, 243, "gray95"]
