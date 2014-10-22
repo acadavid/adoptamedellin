@@ -34,4 +34,6 @@ Adoptamedellin::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+
+  config.carrier_wave_storage = :file
 end
