@@ -34,10 +34,10 @@ class AdoptionPetsController < ApplicationController
     @adoption_pet = AdoptionPet.new(params[:adoption_pet])
 
     if @adoption_pet.save
-      flash[:notice] = "La publicación fue creada exitosamente! Gracias!"
+      flash.now[:notice] = "La publicación fue creada exitosamente! Gracias!"
       redirect_to @adoption_pet
     else
-      flash[:error] = "La publicación no pudo ser creada"
+      flash.now[:error] = "La publicación no pudo ser creada"
       render :action => "new"
     end
   end
@@ -46,10 +46,10 @@ class AdoptionPetsController < ApplicationController
     @adoption_pet = AdoptionPet.find(params[:id])
 
     if @adoption_pet.update_attributes(params[:adoption_pet])
-      flash[:notice] = 'La publicación fue actualizada exitosamente'
+      flash.now[:notice] = 'La publicación fue actualizada exitosamente'
       redirect_to @adoption_pet
     else
-      flash[:error] = 'La publicación no pudo ser actualizada'
+      flash.now[:error] = 'La publicación no pudo ser actualizada'
       render :action => "edit"
     end
   end
@@ -57,7 +57,7 @@ class AdoptionPetsController < ApplicationController
   def destroy
     @adoption_pet = AdoptionPet.find(params[:id])
     @adoption_pet.destroy
-    flash[:notice] = 'La publicación fue eliminada exitosamente'
+    flash.now[:notice] = 'La publicación fue eliminada exitosamente'
     redirect_to adoption_pets_url
   end
 
@@ -66,7 +66,7 @@ class AdoptionPetsController < ApplicationController
                                     params[:user_name],
                                     params[:friend_name],
                                     params[:friend_email]).deliver
-    flash[:success] = "Hemos enviado la mascota a tu amigo! Gracias por ayudar!"
+    flash.now[:success] = "Hemos enviado la mascota a tu amigo! Gracias por ayudar!"
     redirect_to adoption_pet_url(params[:adoption_pet_id])
   end
 end
