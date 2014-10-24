@@ -1,9 +1,10 @@
 class Pet < ActiveRecord::Base
-  attr_accessible :age, :animal, :breed, :color, :gender, :location, :marks, :name, :notes, :size, :story, :pictures_attributes, :pet_contact_attributes
+  attr_accessible :age, :animal, :breed, :color, :gender, :location, :municipality, :marks, :name, :notes, :size, :story, :pictures_attributes, :pet_contact_attributes
 
   validates :animal, :presence => true
   validates :name, :presence => true
   validates :location, :presence => true
+  validates :municipality, :presence => true
   validate :at_least_one_picture
   validates :pet_contact, :presence => true
 

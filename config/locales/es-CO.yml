@@ -211,7 +211,8 @@ es-CO:
       pet:
         animal: El tipo de animal
         name: El nombre de la mascota
-        location: La ubicación de la mascota
+        municipality: La ciudad o el municipio de la mascota
+        location: El barrio o zona de la mascota
         pictures: Las fotos de la mascota
       pet/pet_contact:
         name: El nombre del contacto
