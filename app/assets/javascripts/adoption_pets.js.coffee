@@ -11,6 +11,24 @@ $("#new_interested_contact").submit (e)->
     beforeSend: (xhr) ->
       xhr.setRequestHeader "X-CSRF-Token", $("meta[name=\"csrf-token\"]").attr("content")
     error: (jqXHR, textStatus, errorThrown) ->
-      $("#adoption_form").find(".errors").html "Por favor corrije: #{textStatus}"
+      $("#adoption_form").find(".errors").html "Por favor corrije: #{jqXHR.responseText}"
     success: (data, textStatus, jqXHR) ->
       $("#adoption_form").html "#{data}"
+
+$(document).ready ->
+  updateCountdown($('#adoption_pet_pet_attributes_story'))
+  updateCountdown($('#adoption_pet_temperament'))
+  $("#adoption_pet_pet_attributes_story, #adoption_pet_temperament").change updateCountdown($(this))
+  $("#adoption_pet_pet_attributes_story, #adoption_pet_temperament").keyup ->
+    updateCountdown($(this))
+    textarea_limit = parseInt($(this).attr("maxlength"))
+    current_text = $(this).val()
+    actual_chars = current_text.length
+    if actual_chars > textarea_limit
+      new_text = current_text.substr(0,textarea_limit)
+      $(this).val new_text
+
+updateCountdown = (x) ->
+  remaining = 450 - $(x).val().length
+  jQuery(".countdown_#{x.attr('id')}").text remaining + " caracteres restantes"
+  return
