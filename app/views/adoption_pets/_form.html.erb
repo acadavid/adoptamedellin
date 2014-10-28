@@ -99,12 +99,14 @@
       <div class="picture">
         <h3>Fotografías* (al menos una)</h3>
         <hr />
-        <%= pet_form.fields_for :pictures, Picture.new do |picture_form|  %>
-        <%= picture_form.label :file, "Fotografía" %>
-        <%= picture_form.file_field :file %>
-        <%= picture_form.link_to_remove "Eliminar esta foto", :class => 'erase' %>
-        <%= pet_form.link_to_add "Agregar otra foto", :pictures, :class => 'add' %>
+        <%= pet_form.fields_for :pictures do |picture_form|  %>
+        <p>
+          <%= picture_form.label :file, "Fotografía" %>
+          <%= picture_form.file_field :file %>
+          <%= picture_form.link_to_remove "Eliminar esta foto", :class => 'erase' %>
+        </p>
         <% end %>
+          <%= pet_form.link_to_add "Agregar otra foto", :pictures, :class => 'add' %>
       </div>
 
   <% end %>
