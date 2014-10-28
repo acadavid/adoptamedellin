@@ -16,29 +16,36 @@
   <ul>
     <span>
       <li>
-        <p><b>Sexo: </b>Macho</p>
+        <p><b>Sexo: </b><%= @adoption_pet.gender %></p>
       </li>
       <li>
-        <p><b>Edad: </b>2 años</p>
+        <p><b>Edad: </b><%= @adoption_pet.age %></p>
       </li>
       <li>
-        <p><b>Raza: </b>Criollo</p>      
+        <p><b>Raza: </b><%= @adoption_pet.breed %></p>   
       </li>
       <li>
-        <p><b>Vacunas: </b>Sí</p>
+        <p>
+          <b>Vacunas: </b>
+            <%= check_box_tag 'vaccines', 'vaccines', @adoption_pet.vaccines, disabled: true%>
+          <b>Esterilizado: </b>
+            <%= check_box_tag 'neutered', 'neutered', @adoption_pet.neutered, disabled: true%>
+        </p>
       </li>
       <li>
-        <p><b>Esterilizado: </b>No</p>
-      </li>    
+        <p><b>Ciudad - Municipio: </b>
+          <%= @adoption_pet.municipality %></p>      
+      </li>
       <li>
-        <p><b>Ubicación: </b>Prado, Bello</p>      
+        <p><b>Barrio - Zona: </b>
+          <%= @adoption_pet.location %></p>      
       </li>
     </span>
     <li>
-      <p><b>Salud y temperamento:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet vulputate tellus quis tempus. Duis urna orci, imperdiet at scelerisque vitae, tincidunt quis mauris.</p>
+      <p><b>Salud y temperamento:</b> <%= @adoption_pet.temperament  %></p>
     </li>
     <li>
-      <p><b>Notas Adicionales:</b> Ut euismod fermentum risus, sit amet eleifend sem sollicitudin a. Nulla varius nisi vitae quam euismod cursus. Donec nisl nibh, tempor quis neque id, consequat elementum nisl.</p>
+      <p><b>Notas Adicionales:</b> <%= @adoption_pet.story  %></p>
     </li>
   </ul>
 

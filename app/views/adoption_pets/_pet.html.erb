@@ -6,7 +6,7 @@
       <%= image_tag pet.pictures.first.file.thumbnail.url, width: "243", alt: "Vista previa de la foto de una mascota en adopción" %>
     </div>
     <h3><%= pet.name %></h3>
-    <span><p><b>2</b> Años</p></span> 
+    <span><p><b><%=pet.age.split[0]%></b> <%=pet.age.split[1]%></p></span> 
   </div>
 
   <div style="text-align: center">

@@ -8,7 +8,7 @@ class InterestedContactsController < ApplicationController
     if @interested_contact.save
       render @adoption_pet.pet_contact
     else
-      render :json => {:errors => @interested_contact.errors.full_messages.join(", ")}, :status => :unprocessable_entity
+      render :text => @interested_contact.errors.full_messages.join(", "), :status => :unprocessable_entity
     end
   end
 
