@@ -43,14 +43,14 @@ updateCountdown = (x) ->
   return
 
 fixAgeField = ->
-  if($('#adoption_pet_age').val()==''||$('#age :selected').val()=="")
+  if(!$('#adoption_pet_age').val() || !$('#age :selected').val())
     $("#adoption_pet_pet_attributes_age").val("#{$('#age :selected').val()}")
   else
     $("#adoption_pet_pet_attributes_age").val("#{$('#adoption_pet_age').val()} #{$('#agelist :selected').val()}")
 
 showAgeElements = (show) ->
   fixAgeField()
-  if(show==false||$('#age :selected').val()=="")
+  if(show == false || !$('#age :selected').val())
     $("#adoption_pet_age").hide()
     $("#agelist").hide()
   else
