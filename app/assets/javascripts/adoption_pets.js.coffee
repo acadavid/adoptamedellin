@@ -16,6 +16,7 @@ $("#new_interested_contact").submit (e)->
       $("#adoption_form").html "#{data}"
 
 $(document).ready ->
+  showAgeElements(false)
   updateCountdown($('#adoption_pet_pet_attributes_story'))
   updateCountdown($('#adoption_pet_temperament'))
   $("#adoption_pet_pet_attributes_story, #adoption_pet_temperament").change updateCountdown($(this))
@@ -27,8 +28,31 @@ $(document).ready ->
     if actual_chars > textarea_limit
       new_text = current_text.substr(0,textarea_limit)
       $(this).val new_text
+  $('.numbersOnly').keyup ->
+    this.value = this.value.replace(/[^0-9\.]/g,'')
+  $("#adoption_pet_age, #agelist").change ->
+    fixAgeField()
+  $("#adoption_pet_age").keyup ->
+    fixAgeField()
+  $("#age").change ->
+    showAgeElements(true)
 
 updateCountdown = (x) ->
   remaining = 450 - $(x).val().length
-  jQuery(".countdown_#{x.attr('id')}").text remaining + " caracteres restantes"
+  $(".countdown_#{x.attr('id')}").text remaining + " caracteres restantes"
   return
+
+fixAgeField = ->
+  if(!$('#adoption_pet_age').val() || !$('#age :selected').val())
+    $("#adoption_pet_pet_attributes_age").val("#{$('#age :selected').val()}")
+  else
+    $("#adoption_pet_pet_attributes_age").val("#{$('#adoption_pet_age').val()} #{$('#agelist :selected').val()}")
+
+showAgeElements = (show) ->
+  fixAgeField()
+  if(show == false || !$('#age :selected').val())
+    $("#adoption_pet_age").hide()
+    $("#agelist").hide()
+  else
+    $("#adoption_pet_age").show()
+    $("#agelist").show()
