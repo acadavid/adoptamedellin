@@ -200,6 +200,13 @@ es-CO:
   activemodel:
     errors:
       <<: *errors
+    models:
+      recommend_mailer: Correo
+    attributes:
+      recommend_mailer:
+        name: Tu nombre
+        friend_name: El nombre de tu amigo
+        friend_email: El e-mail de tu amigo
   activerecord:
     errors:
       <<: *errors

@@ -14,6 +14,7 @@ class AdoptionPetsController < ApplicationController
   def show
     @adoption_pet = AdoptionPet.find(params[:id])
     @interested_contact = InterestedContact.new
+    @friend_mailer = RecommendMailer.new
 
     respond_with @adoption_pet
   end
@@ -62,11 +63,16 @@ class AdoptionPetsController < ApplicationController
   end
 
   def recommend
-    FriendMailer.pet_recommendation(params[:adoption_pet_id],
-                                    params[:user_name],
-                                    params[:friend_name],
-                                    params[:friend_email]).deliver
-    flash.now[:success] = "Hemos enviado la mascota a tu amigo! Gracias por ayudar!"
-    redirect_to adoption_pet_url(params[:adoption_pet_id])
+    @friend_mailer = RecommendMailer.new(params[:recommend_mailer])
+    @adoption_pet = AdoptionPet.find(params[:adoption_pet_id])
+    @interested_contact = InterestedContact.new
+
+    if @friend_mailer.deliver(@adoption_pet)
+      flash.now[:success] = "Hemos enviado la mascota a tu amigo! Gracias por ayudar!"
+    else
+      flash.now[:error] = "El correo no pudo ser enviado"
+    end
+    
+    render :action => "show"
   end
 end

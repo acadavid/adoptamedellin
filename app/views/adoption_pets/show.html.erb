@@ -62,30 +62,40 @@
 <div id="adoption_form" class="div_left" >
     <h4>Adopta esta mascota</h4>
     <%= form_for @interested_contact do |f| %>
-    <%= hidden_field_tag :adoption_pet_id, @adoption_pet.id %>
-    <%= f.label "Tu nombre:" %>
-    <%= f.text_field :name %>
-    <%= f.label "Tu E-mail:" %>
-    <%= f.text_field :email %>
-    <%= f.label "Tu teléfono:" %>
-    <%= f.text_field :phone %>
-    <%= f.button "Adoptar", :class => 'btn btn-primary pull-right' %>
+      <%= hidden_field_tag :adoption_pet_id, @adoption_pet.id %>
+      <%= f.label "Tu nombre:" %>
+      <%= f.text_field :name %>
+      <%= f.label "Tu E-mail:" %>
+      <%= f.text_field :email %>
+      <%= f.label "Tu teléfono:" %>
+      <%= f.text_field :phone %>
+      <%= f.button "Adoptar", :class => 'btn btn-primary pull-right' %>
       <div class="errors"></div>
-
-  <% end %>
+    <% end %>
 </div>
 
 <div id="friend_adoption_recommend" class="div_right">
     <h4>Sugiere esta mascota a un amigo</h4>
-    <%= form_tag adoption_pet_recommend_path(@adoption_pet) do %>
-    <%= label_tag "name", "Tu nombre:" %>
-    <%= text_field_tag "name" %>
-    <%= label_tag "friend_name", "El nombre de tu amigo:" %>
-    <%= text_field_tag "friend_name" %>
-    <%= label_tag "friend_email", "E-mail de tu amigo:" %>
-    <%= text_field_tag "friend_email" %>
-    <%= submit_tag "Sugerir", :class => 'btn btn-primary pull-right blue' %>
-  <% end %>
+    <%  if @friend_mailer.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= I18n.translate "activerecord.errors.messages.record_invalid", errors: @friend_mailer.errors.count %></h2>
+        <ul>
+          <% @friend_mailer.errors.full_messages.each do |msg| %>
+            <li>* <%= msg %>.</li>
+          <% end %>
+        </ul>
+      </div>
+      <br>
+    <% end %>    
+    <%= form_for @friend_mailer, :url => adoption_pet_recommend_path(@adoption_pet) do |friend_mailer_form|%>
+      <%= friend_mailer_form.label "Tu nombre:" %>
+      <%= friend_mailer_form.text_field :name %>
+      <%= friend_mailer_form.label "El nombre de tu amigo:" %>
+      <%= friend_mailer_form.text_field :friend_name %>
+      <%= friend_mailer_form.label "E-mail de tu amigo:" %>
+      <%= friend_mailer_form.text_field :friend_email %>
+      <%= submit_tag "Sugerir", :class => 'btn btn-primary pull-right blue' %>
+    <% end %>
 </div>
 
 
