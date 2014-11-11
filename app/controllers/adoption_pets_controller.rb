@@ -6,7 +6,7 @@ class AdoptionPetsController < ApplicationController
   before_filter :require_login, :only => [:edit, :update, :destroy]
 
   def index
-    @pets = AdoptionPet.page(params[:page]).per(18)
+    @pets = AdoptionPet.page(params[:page]).per(6)
 
     respond_with @pets
   end
