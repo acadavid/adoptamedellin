@@ -7,17 +7,25 @@
     </td>
   </tr>
   <tr>
-    <td class="bodyContent" style="padding-top:0; padding-bottom:0;">
-      <img src="<%= @pet.first_picture_file.email.url %>" style="max-width:560px;" id="bodyImage" mc:label="body_image" mc:edit="body_image" mc:allowtext />
+    <td class="bodyContent" style="padding-top:20px; padding-bottom:0;">
+      <%= image_tag @pet.pictures.first.file.email.url, width: "243"%>
     </td>
   </tr>
   <tr>
     <td valign="top" class="bodyContent" mc:edit="body_content01">
       <h2><%= @pet.name %> busca hogar!</h2>
       <h4>Algunos datos de la mascota:</h4>
+      <strong>Tipo:</strong> <%= @pet.animal || "Desconocido" %><br />
+      <strong>Nombre:</strong> <%= @pet.name || "Desconocido" %><br />
+      <strong>Sexo:</strong> <%= @pet.gender || "Desconocido" %><br />
       <strong>Edad:</strong> <%= @pet.age || "Desconocida" %><br />
+      <strong>Raza:</strong> <%= @pet.breed || "Desconocida" %><br />
       <strong>Tamaño:</strong> <%= @pet.size || "Desconocido" %><br />
-      <strong>Ubicación:</strong> <%= @pet.location || "Desconocida" %><br />
+      <strong>Ubicación:</strong> <%= "#{@pet.municipality} - #{@pet.location}" || "Desconocida" %><br />
+      <strong>Salud y Temperamento:</strong> <%= @pet.temperament || "Desconocido" %><br />
+      <strong>Notas Adicionales:</strong> <%= @pet.story || "Desconocido" %><br />
+      <strong>Vacunado:</strong> <%= (@pet.vaccines ? "Si" : "No") || "Desconocido" %><br />
+      <strong>Esterilizado:</strong> <%= (@pet.neutered ? "Si" : "No") || "Desconocido" %><br />
 
       <h2><a href="<%= adoption_pet_url(@pet) %>">Click Aquí si estás interesado en la mascota</a><h2>
     </td>
