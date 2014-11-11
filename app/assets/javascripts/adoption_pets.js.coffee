@@ -37,6 +37,26 @@ $(document).ready ->
   $("#age").change ->
     showAgeElements(true)
 
+$("#share_pet_on_fb").click ->
+  FB.ui
+    method: "stream.publish"
+    display: "iframe"
+    attachment: {
+      name: "Me llamo #{$(".pet_name").html()} y quiero que me adopten"
+      caption: "Soy una mascota que busca un hogar, he pensado en ti para hacerte compañía y por eso quiero que visites mi perfil para que veas lo tierno que soy."
+      href: $(location).attr('href')
+      media:[{"type":"image","src":$('.pet_image').attr('src'),"href":$(location).attr('href')}]
+    }
+  , (response) ->
+
+$("#share_pet_on_twitter").click (e) ->
+  e.preventDefault()
+  loc = $(location).attr('href')
+  title = escape($(this).attr("title"))
+  window.open "http://twitter.com/share?url=" + loc + "&text=" + title + "&", "twitterwindow", "height=450, width=550, top=" + ($(window).height() / 2 - 225) + ", left=" + $(window).width() / 2 + ", toolbar=0, location=0, menubar=0, directories=0, scrollbars=0"
+  return
+
+
 updateCountdown = (x) ->
   remaining = 450 - $(x).val().length
   $(".countdown_#{x.attr('id')}").text remaining + " caracteres restantes"
@@ -56,3 +76,4 @@ showAgeElements = (show) ->
   else
     $("#adoption_pet_age").show()
     $("#agelist").show()
+

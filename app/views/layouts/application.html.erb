@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <link rel="shortcut icon" type="image/x-icon" href="<%= asset_path("favicon.ico") %>"/>
@@ -22,7 +22,6 @@
 
   </head>
   <body>
-    
     <div class="container">
       <header class="masthead">
         <%= link_to(image_tag(asset_path("adopta_medellin_logo.png"), :width => "320"), root_path) %>
@@ -49,7 +48,6 @@
 
       
     </div> <!-- /container -->
-
     <footer>
       <div class='container'>
         <p>W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding.
@@ -63,6 +61,31 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <%= javascript_include_tag "application" %>
+    
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '780610261987429',
+          xfbml      : true,
+          version    : 'v2.2',
+          status     : true, 
+          cookie     : true, 
+          xfbml      : true
+        });
+      };
 
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/es_LA/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <script type="text/javascript">
+      window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs")); 
+    </script>    
   </body>
 </html>
