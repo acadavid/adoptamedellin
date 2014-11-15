@@ -11,15 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141023220027) do
+ActiveRecord::Schema.define(:version => 20141113234830) do
 
   create_table "adoption_pets", :force => true do |t|
     t.boolean  "vaccines"
     t.boolean  "neutered"
     t.text     "temperament"
     t.boolean  "like_kids"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                                  :null => false
+    t.datetime "updated_at",                                  :null => false
+    t.string   "status",      :default => "pending_approval"
   end
 
   create_table "interested_contacts", :force => true do |t|
