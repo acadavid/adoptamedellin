@@ -143,6 +143,22 @@ h2.pet_name { text-align: left; text-transform: capitalize; font-size: 25px; col
 #new_adoption_pet fieldset .display { display:inline-block;margin-right: 2px; vertical-align: middle;}
 #new_adoption_pet .btn { margin: 0 10px; float: left; display: block;}
 
+/* Edit adoption_pet */
+
+[id^="edit_adoption_pet"] input[type="text"],
+[id^="edit_adoption_pet"] input[type="email"],
+[id^="edit_adoption_pet"] input[type="phone"] { width: 45%; vertical-align:top;}
+[id^="edit_adoption_pet"] .span5px { margin:0; }
+[id^="edit_adoption_pet"] h3 { margin: 0; font-size: 13px; color: #5a5a5a; text-align: left;line-height: 24px; font-weight: normal;}
+[id^="edit_adoption_pet"] hr { margin:9px 0 11px 0; border: 1px solid #828282; border-width: 1px 0 0; box-shadow: none;}
+[id^="edit_adoption_pet"] fieldset {display:inline-block; vertical-align:top; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; padding:0 13px;margin-bottom:26px; width: 100%;}
+[id^="edit_adoption_pet"] fieldset > input[type="checkbox"] { vertical-align:top; margin-right:13px;}
+[id^="edit_adoption_pet"] fieldset input#adoption_pet_like_kids {margin-right:0;}
+[id^="edit_adoption_pet"] fieldset textarea#adoption_pet_temperament,#adoption_pet_pet_attributes_story {width: 96%; height: 60px;}
+[id^="edit_adoption_pet"] fieldset label { display:none;}
+[id^="edit_adoption_pet"] fieldset .display { display:inline-block;margin-right: 2px; vertical-align: middle;}
+[id^="edit_adoption_pet"] .btn { margin: 0 10px; float: left; display: block;}
+
 #back { margin: 15px; color: #33bbb8;}
 
 #primary label { padding-left:25px; background:url(image-path("/assets/sprites.png")) no-repeat left; background-size: 100px;}

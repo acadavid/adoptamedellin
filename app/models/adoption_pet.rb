@@ -1,5 +1,5 @@
 class AdoptionPet < ActiveRecord::Base
-  attr_accessible :like_kids, :neutered, :temperament, :vaccines, :pet_attributes
+  attr_accessible :like_kids, :neutered, :temperament, :vaccines, :status, :pet_attributes
 
   has_one :pet, :dependent => :destroy, :as => :owner
 
@@ -9,7 +9,11 @@ class AdoptionPet < ActiveRecord::Base
 
   delegate :name, :age, :animal, :size, :pictures, :pet_contact, :interested_contacts, :gender, :location, :breed, :story, :municipality, :to => :pet
 
+  STATES = ["pending_approval","unadopted","adopted"]
+
   def first_picture_file
     pictures.first.file
   end
+
+  scope :unadopted_pets, -> { where(status: "unadopted")}
 end

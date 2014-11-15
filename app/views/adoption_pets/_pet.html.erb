@@ -5,13 +5,14 @@
       <%= link_to "Click aquí para más información", adoption_pet_path(pet), class: "overlay" %>
       <%= image_tag pet.pictures.first.file.thumbnail.url, width: "243", alt: "Vista previa de la foto de una mascota en adopción" %>
     </div>
-    <h3><%= pet.name %></h3>
-    <span><p><b><%=pet.age.split[0]%></b> <%=pet.age.split[1]%></p></span> 
+    <h3><%= "#{pet.name} "%></h3>
+
+    <span><p><b><%= pet.age.split[0] %></b> <%= pet.age.split[1] %></p></span> 
   </div>
 
   <div style="text-align: center">
     <% if logged_in? %>
-      <%= link_to "Edit", edit_adoption_pet_path(pet)%> || <%= link_to "Delete", adoption_pet_path(pet), method: :delete, data: { confirm: 'Are you sure? There is no go back and pet is gone forever :(' } %>
+      <%= link_to "Edit", edit_adoption_pet_path(pet)%> || <%= link_to "Delete", adoption_pet_path(pet), method: :delete, data: { confirm: 'Are you sure? There is no go back and pet is gone forever :(' } %> || <%= " #{pet.status.humanize}."%>
     <% end %>
   </div>
 

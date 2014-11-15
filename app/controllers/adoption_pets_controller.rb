@@ -6,7 +6,11 @@ class AdoptionPetsController < ApplicationController
   before_filter :require_login, :only => [:edit, :update, :destroy]
 
   def index
-    @pets = AdoptionPet.page(params[:page]).per(6)
+    if logged_in?
+      @pets = AdoptionPet.page(params[:page]).per(6)
+    else
+      @pets = AdoptionPet.page(params[:page]).per(6).unadopted_pets
+    end
 
     respond_with @pets
   end
@@ -35,8 +39,8 @@ class AdoptionPetsController < ApplicationController
     @adoption_pet = AdoptionPet.new(params[:adoption_pet])
 
     if @adoption_pet.save
-      flash.now[:notice] = "La publicación fue creada exitosamente! Gracias!"
-      redirect_to @adoption_pet
+      flash[:notice] = "La publicación fue creada, nuestro equipo revisará la publicación y te enviaremos un correo cuando esté lista. No tardaremos, lo prometemos. Gracias!"
+      redirect_to :action => "index"
     else
       flash.now[:error] = "La publicación no pudo ser creada"
       render :action => "new"
@@ -45,12 +49,11 @@ class AdoptionPetsController < ApplicationController
 
   def update
     @adoption_pet = AdoptionPet.find(params[:id])
-
     if @adoption_pet.update_attributes(params[:adoption_pet])
-      flash.now[:notice] = 'La publicación fue actualizada exitosamente'
+      flash[:notice] = 'La publicación fue actualizada exitosamente'
       redirect_to @adoption_pet
     else
-      flash.now[:error] = 'La publicación no pudo ser actualizada'
+      flash[:error] = 'La publicación no pudo ser actualizada'
       render :action => "edit"
     end
   end
