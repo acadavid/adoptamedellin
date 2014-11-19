@@ -45,7 +45,7 @@ $("#share_pet_on_fb").click ->
       name: "Me llamo #{$(".pet_name").html()} y quiero que me adopten"
       caption: "Soy una mascota que busca un hogar, he pensado en ti para hacerte compañía y por eso quiero que visites mi perfil para que veas lo tierno que soy."
       href: $(location).attr('href')
-      media:[{"type":"image","src":$('.pet_image').attr('src'),"href":$(location).attr('href')}]
+      media:[{"type":"image","src":$('.div_left img').attr('src'),"href":$(location).attr('href')}]
     }
   , (response) ->
 
