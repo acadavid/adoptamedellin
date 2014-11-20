@@ -76,6 +76,9 @@
 	.well .div_right label{
 		width: auto;
 	}
+	div.alert.alert-success.fade.in{
+		margin: 30px 0 -15px;
+	}
 }
 
 @media screen and (max-width: 850px) {
@@ -136,7 +139,7 @@
 	/***************
 	contact styles
 	***************/
-	.contact .grill_48 span a { 
+	.contact .grid_48 span a { 
 		display: block;
 		margin: 3px 0;
 	}
@@ -197,13 +200,13 @@
 	/***************
 	contact styles
 	***************/
-	.grill_48{
+	.grid_48{
 		width: 100%;
 	}
 	.banner{
 		display: none;
 	}
-	.contact .grill_48 span a { 
+	.contact .grid_48 span a { 
 		display: inline;
 	}
 	.contact .twitter_icon{
@@ -293,7 +296,7 @@
 	.about{
 		padding: 0 5px;
 	}
-	.contact .grill_48 span{
+	.contact .grid_48 span{
 		margin: 15px 0 0 3%;
 	}
 }
