@@ -37,7 +37,7 @@ nav { display: inline-block; float: right;}
 
 section .span4px { margin: 5% 0 0; }
   
-section .span4px p { font-size:1.1em; text-align:left;line-height: 24px; }
+section .span4px p { font-size:1.1em; text-align: center; line-height: 24px; }
  
 section .span6px.pull-right {text-align: center;margin: 0; background: url(image-path("dog_and_cat_staring.png")) center -6px no-repeat; height: 278px; -moz-background-size: 343px; -webkit-background-size: 343px; background-size: 343px; }
 
@@ -73,7 +73,7 @@ footer { background:#f0f0f0; padding:50px 0; margin-top: 40px; text-align:center
 /* single_post thumbnail */
 
 .well .single_post { position:relative; display:inline-block; width: 90%; margin:32px auto 0; vertical-align: top; border-radius: 3px; overflow: hidden;}
-.well .single_post h3 { line-height: 20px; position: absolute; bottom: 0; left: 0; margin: 0; font-weight: 200; font-size: 1.2em; background: rgba(51, 136, 122, 0.59); width: 85%; text-align: left; text-transform: capitalize; padding: 4%; padding-left: 11%;}
+.well .single_post h3 { line-height: 20px; position: absolute; bottom: 0; left: 0; margin: 0; font-weight: 200; font-size: 1.2em; background: rgba(51, 136, 122, 0.59); width: 85%; text-align: left; text-transform: capitalize; padding: 4%; padding-left: 15%;}
 .well .single_post h3 a { color: #fff; text-decoration:none;}
 
 .well .single_post .overlay { overflow: hidden;}
@@ -197,6 +197,6 @@ h2.pet_name { text-align: left; text-transform: capitalize; font-size: 25px; col
 .contact .mail_icon, .div_info .mail_icon { background-position: -52px -77px;}
 
 select { height: 30px; width: 49%; color:#949494;}
-i.gender {background-size: 164px; width: 27px; height: 27px; position: absolute; left: 7px; bottom: 11px;}
+i.gender {background-size: 164px; width: 27px; height: 27px; position: absolute; left: 2%; bottom: 22%;}
 i.gender.male { background-position: -40px -172px;}
 i.gender.female { background-position: -8px -170px; height: 29px;}

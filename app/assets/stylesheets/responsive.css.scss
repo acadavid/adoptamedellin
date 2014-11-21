@@ -1,3 +1,13 @@
+@media only screen and (min-width: 1000px){
+	section .span4px{
+		width: 45%;
+		margin-left: 5%;
+	}
+	section .span6px{
+		width: 50%;
+	}
+}
+
 @media screen and (max-width: 1000px){
 	/***************
 	home styles
@@ -79,6 +89,23 @@
 	div.alert.alert-success.fade.in{
 		margin: 30px 0 -15px;
 	}
+	/***************
+	gender_icon styles
+	***************/
+	.well .single_post h3{
+		padding-left: 18%;
+	}
+	i.gender{
+		background-size: 500%;
+		width: 27px;
+		height: 27px;
+	}
+	i.gender.male{
+		background-position: -32px -136px;
+	}
+	i.gender.female{
+		background-position: -7px -135px;
+	}
 }
 
 @media screen and (max-width: 850px) {
@@ -103,7 +130,8 @@
 	.banner{
 		background-size: 420px;
 		height: 160px
-	}	
+	}
+
 }
 
 
@@ -145,6 +173,25 @@
 	}
 	.contact .twitter_icon {
 		margin: 0;
+	}
+	/***************
+	gender_icon styles
+	***************/
+	.well .single_post h3{
+		padding-left: 14%;
+	}
+
+	i.gender{
+		background-size: 150px;
+		width: 27px;
+		height: 27px;
+	}
+	i.gender.male{
+		background-position: -36px -154px;
+	}
+	i.gender.female{
+		background-position: -8px -155px;
+		height: 27px;
 	}
 }
 
@@ -246,7 +293,25 @@
 	input {
 		width: 94%;
 		margin: 5px 1% 5px;
-	}	
+	}
+	/***************
+	gender_icon styles
+	***************/
+	.well .single_post h3 {
+		padding-left: 14%;
+	}
+	i.gender{
+		background-size: 109px;
+		width: 20px;
+		height: 20px;
+	}
+	i.gender.male{
+		background-position: -28px -113px;
+	}
+	i.gender.female{
+		background-position: -8px -112px;
+		height: 20px;
+	}
 }
 
 @media screen and (max-width: 400px){
@@ -299,5 +364,20 @@
 	.contact .grid_48 span{
 		margin: 15px 0 0 3%;
 	}
+	/***************
+	gender_icon styles
+	***************/
+	i.gender{
+		background-size: 150px;
+		width: 27px;
+		height: 27px;
+	}
+	i.gender.male{
+		background-position: -36px -154px;
+	}
+	i.gender.female{
+		background-position: -8px -155px;
+		height: 27px;
+	}	
 }
 
