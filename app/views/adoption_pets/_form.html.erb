@@ -33,32 +33,54 @@
         <h3>Información básica*</h3>
         <hr />
         <%= f.label "Perro", :for => "adoption_pet_pet_attributes_animal_valueperro",:class => 'display' %>
-        <%= pet_form.radio_button :animal, "Perro" %>
+        <%= pet_form.radio_button :animal, :value => "perro" %>
         <%= f.label "Gato", :for => "adoption_pet_pet_attributes_animal_valuegato", :class => 'display' %>
-        <%= pet_form.radio_button :animal, "Gato" %>        
+        <%= pet_form.radio_button :animal, :value => "gato" %>        
         <%= f.label "Nombre" %>
         <%= pet_form.text_field :name, :placeholder => 'Nombre del animal'  %>
-        <select name="age" id="age" style="height: 30px;width: 47%;">
-          <option value="" selected>Seleccione Edad</option>
-          <option value="Cachorro">Cachorro</option>
-          <option value="Joven">Joven</option>
-          <option value="Adulto">Adulto</option>
+        <select>
+          <option value="" disabled selected style="display:none;">Edad (aproximada)</option>
+          <option>0 Meses</option>
+          <option>1 Mes</option>
+          <option>2  Meses</option>
+          <option>3 Meses</option>
+          <option>4 Meses</option>
+          <option>5 Meses</option>
+          <option>6 Meses</option>
+          <option>7 Meses</option>
+          <option>8 Meses</option>
+          <option>9 Meses</option>
+          <option>10 Meses</option>
+          <option>11 Meses</option>
+          <option>12 Meses</option>
+          <option>1 Año</option>
+          <option>2 Años</option>
+          <option>3 Años</option>
+          <option>4 Años</option>
+          <option>5 Años</option>
+          <option>6 Años</option>
+          <option>7 Años</option>
+          <option>8 Años</option>
+          <option>9 Años</option>
+          <option>10 Años</option>
+          <option>11 Años</option>
+          <option>12 Años</option>
         </select>
+
+   <!-- <%= f.label "Edad" %>
+        <%= pet_form.text_field :age, :placeholder => 'Edad (aproximada)'  %> -->
+
         <%= f.label "Raza" %>
         <%= pet_form.text_field :breed, :placeholder => 'Raza' %>
-        <%= f.label "Edad" %>
-        <%= pet_form.hidden_field :age, :value => ''%>
-        <input id="adoption_pet_age" placeholder="Edad (Opcional)" 
-          class="numbersOnly" maxlength="2" type="text" style="width: 18%; margin: 0; min-width: 20px;">
-        <select name="agelist" id="agelist" style="height: 30px;width: 26%;">
-          <option value="Años">Años</option>
-          <option value="Meses">Meses</option>
-          <option value="Días">Días</option>
+        <select>
+          <option value="" disabled selected style="display:none;">Sexo</option>
+          <option>Macho</option>
+          <option> Hembra</option>
         </select>
-        <%= f.label "Macho", :for => "adoption_pet_pet_attributes_animal_valueperro", :class => 'display' %>
-        <%= pet_form.radio_button :gender, "Macho" %>
-        <%= f.label "Hembra", :for => "adoption_pet_pet_attributes_animal_valuegato", :class => 'display' %>
-        <%= pet_form.radio_button :gender, "Hembra" %>
+        
+   <!-- <%= f.label "Sexo" %>
+        <%= pet_form.text_field :gender,:placeholder => 'Sexo' %> -->
+
       </fieldset>
 
       <fieldset>
@@ -124,6 +146,7 @@
           <% end %>
         <% end %>
       </div>
+
   <% end %>
     </div>
 
