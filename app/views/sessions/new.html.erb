@@ -1,4 +1,6 @@
 <%= form_tag sessions_path do %>
+  <h2>Ingresa los datos de logueo</h2>
+  <hr/>
   <div class="field">
     <%= label_tag :email %>
     <%= text_field_tag :email, params[:email], :placeholder => "E-mail" %>
@@ -13,5 +15,5 @@
   <%= label_tag :remember_me, nil, :class => "checkbox inline" %>
   </div>
 
-  <div class="actions"><%= submit_tag "Log in" %></div>
+  <div class="actions"><%= submit_tag "Log in", :class => "btn btn-primary" %></div>
 <% end %>

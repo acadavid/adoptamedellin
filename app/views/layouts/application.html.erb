@@ -34,14 +34,16 @@
               <li><%= link_to "Logout", logout_path  %></li>
             <% end %>
           </ul>
-        </nav>      
+        </nav>
       </header>
+      <% if current_user %>
+        <h6>Hey <%= "#{current_user.email}" %>!, remember you're logged as administrator.
+        </h6>
+      <% end %> 
       <hr />
 
         <div class="well clearfix">
-
           <%= render partial: "shared/flash_messages", flash: flash %> 
-
           <%= yield %>
         </div>
 
