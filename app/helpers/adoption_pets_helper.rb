@@ -18,10 +18,20 @@ module AdoptionPetsHelper
 
   private
   def previous_pet(adoption_pet)
-    AdoptionPet.where("created_at < ?", adoption_pet.created_at).order('created_at DESC').limit(1).first
+    @ap = AdoptionPet.where("created_at < ?", adoption_pet.created_at)
+    if logged_in?
+      @ap.order('created_at DESC').limit(1).first
+    else
+      @ap.order('created_at DESC').unadopted_pets.limit(1).first
+    end 
   end
 
   def next_pet(adoption_pet)
-    AdoptionPet.where("created_at > ?", adoption_pet.created_at).limit(1).first
+    @ap = AdoptionPet.where("created_at > ?", adoption_pet.created_at)
+    if logged_in?
+      @ap.limit(1).first
+    else
+      @ap.unadopted_pets.limit(1).first
+    end
   end
 end
