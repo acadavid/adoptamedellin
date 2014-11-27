@@ -34,7 +34,6 @@ class AdoptionPetsController < ApplicationController
 
   def edit
     @adoption_pet = AdoptionPet.find(params[:id])
-    @municipalities = Municipality.all
   end
 
   def create
