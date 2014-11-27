@@ -34,10 +34,10 @@
         <hr />
         <%= label :animal, "Perro", class: 'display' %>
         <%= pet_form.radio_button :animal, "perro", 
-              :checked => @adoption_pet.pet.animal.eql?("perro") %>
+              :checked => @adoption_pet.animal.eql?("perro") %>
         <%= label :animal, "Gato", class: 'display' %>
         <%= pet_form.radio_button :animal, "gato", 
-              :checked => @adoption_pet.pet.animal.eql?("gato") %>       
+              :checked => @adoption_pet.animal.eql?("gato") %>       
         <%= f.label "Nombre" %>
         <%= pet_form.text_field :name, :placeholder => 'Nombre del animal'  %>
         <%= pet_form.select :age,
@@ -68,14 +68,14 @@
                 ["10 Años"],
                 ["11 Años"],
                 ["12 Años"]],
-                selected: @adoption_pet.pet.age.nil? ? "edad" : @adoption_pet.pet.age , 
+                selected: @adoption_pet.age.nil? ? "edad" : @adoption_pet.age , 
                 disabled: "edad") %>
 
         <%= f.label "Raza" %>
         <%= pet_form.text_field :breed, :placeholder => 'Raza' %>
         <%= pet_form.select :gender,
               options_for_select( [["Sexo"], ["Macho","macho"], ["Hembra","hembra"]], 
-              selected: @adoption_pet.pet.gender.nil? ? "Sexo" : @adoption_pet.pet.gender, 
+              selected: @adoption_pet.gender.nil? ? "Sexo" : @adoption_pet.gender, 
               disabled: "Sexo" ) %>
       </fieldset>
 

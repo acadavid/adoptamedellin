@@ -15,4 +15,4 @@ Municipality.create([{ municipality: 'medellin' },
   { municipality: 'caldas' },
   { municipality: 'la_estrella' },
   { municipality: 'girardota' },
-  { municipality: 'copacabana' }]) if Municipality.all.empty?
+  { municipality: 'copacabana' }]) unless Municipality.count == 0

@@ -4,7 +4,7 @@ class AdoptionPetsController < ApplicationController
   respond_to :html
 
   before_filter :require_login, :only => [:edit, :update, :destroy]
-  before_filter :list_municipalities, :only => [:new, :create, :update]
+  before_filter :municipalities_list, :only => [:new, :create, :update, :edit]
 
   def index
     if logged_in?
@@ -80,7 +80,7 @@ class AdoptionPetsController < ApplicationController
   end
 
   protected
-    def list_municipalities
+    def municipalities_list
       @municipalities = Municipality.all
     end
 end
