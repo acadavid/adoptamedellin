@@ -26,9 +26,11 @@
       <li>
         <p>
           <b>Vacunas: </b>
-            <%= check_box_tag 'vaccines', 'vaccines', @adoption_pet.vaccines, disabled: true%>
+            <i id="vaccines" class="true" title="Está vacunado">Está vacunado</i>
+            <i id="vaccines" class="false" title="No está vacunado" style="display: none;">Sin vacunar</i>
           <b>Esterilizado: </b>
-            <%= check_box_tag 'neutered', 'neutered', @adoption_pet.neutered, disabled: true%>
+            <i id="neutered" class="true" title="Está esterilizado">Está Esterilizado</i>
+            <i id="neutered" class="false" title="No está esterilizado"style="display: none;">Sin esterilizar</i>
         </p>
       </li>
       <li>
@@ -101,7 +103,5 @@
 <% if logged_in? %>
   <%= link_to 'Edit', edit_adoption_pet_path(@adoption_pet) %> | <%= link_to "Delete", adoption_pet_path(@adoption_pet), method: :delete, data: { confirm: 'Are you sure? There is no go back and pet is gone forever :(' } %>
 <% end %>
-<br />
 
-<p class="alert_info">Recuerda, al dar click en adoptar te comprometes a adsf y qwerty, asegurate de estar de acuerdo con todos los miembros de tu familia antes de iniciar el proceso de adopción.</p>
 

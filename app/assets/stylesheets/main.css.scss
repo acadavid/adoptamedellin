@@ -59,13 +59,13 @@ input { width: 46%;}
 
 .well h2,h4 {color: #999797; clear: both; }
 
-.well i { background: url("/assets/sprites.png") no-repeat; display: inline-block; vertical-align: middle;} 
+.well i { background: url("/assets/sprites.png") no-repeat; display: inline-block; vertical-align: middle; line-height: 15px; text-indent: -999em;} 
 
 .well span {display: block; text-align: center; font-size: 13px;}
 
 .well a:hover { color: #33bbb8;}
 
-footer { background:#f0f0f0; padding:50px 0; margin-top: 40px; text-align:center; }
+footer { background:#f0f0f0; padding:25px 0; margin-top: 40px; text-align:center; }
 
 .picture { padding: 0 13px;}
 .picture img { width: 31%;}
@@ -74,7 +74,7 @@ footer { background:#f0f0f0; padding:50px 0; margin-top: 40px; text-align:center
 /* single_post thumbnail */
 
 .well .single_post { position:relative; display:inline-block; width: 90%; margin:32px auto 0; vertical-align: top; border-radius: 3px; overflow: hidden;}
-.well .single_post h3 { line-height: 20px; position: absolute; bottom: 0; left: 0; margin: 0; font-weight: 200; font-size: 1.2em; background: rgba(51, 136, 122, 0.59); width: 85%; text-align: left; text-transform: capitalize; padding: 4%; padding-left: 15%;}
+.well .single_post h3 { line-height: 20px; position: absolute; bottom: 0; left: 0; margin: 0; font-weight: 200; font-size: 1.2em; background: rgba(16, 103, 89, 0.59); width: 85%; text-align: left; text-transform: capitalize; padding: 4%; padding-left: 15%;}
 .well .single_post h3 a { color: #fff; text-decoration:none;}
 
 .well .single_post .overlay { overflow: hidden;}
@@ -95,12 +95,32 @@ footer { background:#f0f0f0; padding:50px 0; margin-top: 40px; text-align:center
 .well .left { position: absolute; left: 0; top: -5px;}
 .well .right { position: absolute; right: 0; top: -5px;}
 
+
+/* icons */
+
+i.gender {background-size: 164px; width: 27px; height: 27px; position: absolute; left: 2%; bottom: 22%;}
+i.gender.male { background-position: -40px -172px;}
+i.gender.female { background-position: -8px -170px; height: 29px;}
+
+.social { position: absolute; bottom: -6px; right: 0;}
+.social p { display: inline; margin-right: 5px;}
+
+i.true, i.false { background: url(image-path("/assets/sprites.png")) no-repeat; background-size: 95px; border-radius: 5px; border: 2px solid #c0bcbc; width: 13px; height: 12px;}
+i.true { background-position: -32px -27px;}
+i.false { background-position: -9px -27px;}
+
+.erase, .add { display:inline-block; background: url(image-path("/assets/sprites.png")) center no-repeat; background-size: 90px; }
+.erase { background-position:-6px -41px; text-indent: -9999em; width:17px; height:17px; -moz-opacity:0.6; -webkit-opacity: 0.6; opacity: 0.6;-moz-transition: all 0.4s; -webkit-transition: all 0.4s; -moz-transition: all 0.4s; -webkit-transition: all 0.4s; transition: all 0.4s;}
+a.add { background-position: -5px -112px; text-decoration: none; color: #a2a2a2; padding: 2px 4px 4px 24px;}
+.erase:hover, .add:hover { -moz-opacity:1; -webkit-opacity: 1; opacity: 1;}
+a.add:hover { color: #7E7E7E; text-decoration: none; background-position: -5px -141px;}
+
 /* single_pet page */
 
 h2.pet_name { text-align: left; text-transform: capitalize; font-size: 25px; color: #666; margin: 0 0 5px;}
 
-.well .div_left { width: 50%; float: left; overflow: hidden; box-sizing: border-box; padding-right: 10px;}
-.well .div_left figure { max-height: 480px; width: 100%; margin: 0; overflow: hidden;}
+.well .div_left { max-height: 380px; width: 50%; float: left; overflow: hidden; box-sizing: border-box; padding-right: 10px;}
+.well .div_left figure { width: 100%; margin: 0; overflow: hidden;}
 .well .div_left label { width: 48%; display: inline-block;}
 .well .div_left img {width: 100%; }
 .well .div_left li { line-height: 25px;}
@@ -108,18 +128,13 @@ h2.pet_name { text-align: left; text-transform: capitalize; font-size: 25px; col
 .well .div_right { height: auto; width: 50%; padding-left: 10px; float: left; box-sizing: border-box;}
 .well .div_right label { width: 48%; display: inline-block;}
 
-.well .div_info { height: 460px; width: 50%; padding-left: 10px; box-sizing: border-box; margin-bottom: 20px; float: left; position: relative; }
+.well .div_info { height: 380px; width: 50%; padding-left: 10px; box-sizing: border-box; padding-bottom: 20px; float: left; position: relative; margin-bottom: 20px;}
 .well .div_info a { margin: 0 5px 10px 0;}
 .well .div_info ul { margin: 0;}
 .well .div_info li { line-height: 25px;}
-.well .div_info #back { position: absolute; bottom: -36px; left: 0;}
+.well .div_info #back { position: absolute; bottom: -21px; left: 0;}
 .well .div_info { font-size: 13px; text-align: justify;}
 .well .div_info span li { width: 50%; float: left; text-align: left;}
-
-.social { position: absolute; bottom: -21px; right: 0;}
-.social p { display: inline; margin-right: 5px;}
-
-.alert_info { color: #E76B6B; font-style: italic; text-align: center; width: 545px; margin: 0 auto; display: -webkit-box; padding-top: 15px; clear: both;}
 
 
 /* form basic styles */
@@ -127,6 +142,9 @@ h2.pet_name { text-align: left; text-transform: capitalize; font-size: 25px; col
 .form { width:50%; text-align:center; display:inline-block; float:left;}
 .form label {display:none;}
 .form .display_label label, .form .display_label input  { display:inline-block; float:left; }
+
+select { height: 30px; width: 48%; color:#949494;}
+select#adoption_pet_status { width: 98%;}
 
 /* New adoption_pet */
 
@@ -161,12 +179,7 @@ h2.pet_name { text-align: left; text-transform: capitalize; font-size: 25px; col
 #error_explanation { color: #b94a48; margin-bottom: 20px; height: 100px;}
 #error_explanation ul li { width: 50%; float: left;}
 #error_explanation h2 { color: #b94a48; text-align: left; font-size: 18px; margin: 10px; line-height: 30px;}
-
 .errors { color: #b94a48;}
-.erase, .add { display:inline-block; text-indent: -9999em; width:17px; height:17px; background: url(image-path("/assets/sprites.png")) center no-repeat; background-size: 90px; -moz-opacity:0.6; -webkit-opacity: 0.6; opacity: 0.6;-moz-transition: all 0.4s; -webkit-transition: all 0.4s; -moz-transition: all 0.4s; -webkit-transition: all 0.4s; transition: all 0.4s;}
-.erase { background-position:-6px -41px;}
-.add { background-position:-6px -23px;}
-.erase:hover, .add:hover { -moz-opacity:1; -webkit-opacity: 1; opacity: 1;}
 
 .field_with_errors { display: inline; }
 .field_with_errors input {border: 1px solid #b94a48; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #b94a48; -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #b94a48; -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #b94a48;}
@@ -188,13 +201,12 @@ h2.pet_name { text-align: left; text-transform: capitalize; font-size: 25px; col
 .contact p { margin: 0 0 2px; }
 .contact span {text-align: left; margin: 15px 0 0 15px;}
 .contact i, .div_info i { background-size: 95px; width: 18px; height: 18px; margin-right: 5px;}
-.contact .facebook_icon, .div_info .facebook_icon { background-position: -6px -77px;}
-.contact .twitter_icon, .div_info .twitter_icon  { background-position: -30px -77px;}
+.contact .facebook_icon, .div_info .facebook_icon { background-position: -6px -77px; cursor: pointer;}
+.contact .twitter_icon, .div_info .twitter_icon  { background-position: -30px -77px; cursor: pointer;}
 .contact .twitter_icon  { margin-left: 10px;}
 .contact .mail_icon, .div_info .mail_icon { background-position: -52px -77px;}
 
-select { height: 30px; width: 48%; color:#949494;}
-select#adoption_pet_status { width: 100%;}
-i.gender {background-size: 164px; width: 27px; height: 27px; position: absolute; left: 2%; bottom: 22%;}
-i.gender.male { background-position: -40px -172px;}
-i.gender.female { background-position: -8px -170px; height: 29px;}
+/* footer */
+
+footer ul { display: inline-block;}
+footer li { float: left; width: 70px; height: 70px; background: #fff; margin: 0 10px;}
