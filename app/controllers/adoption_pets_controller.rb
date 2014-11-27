@@ -4,6 +4,7 @@ class AdoptionPetsController < ApplicationController
   respond_to :html
 
   before_filter :require_login, :only => [:edit, :update, :destroy]
+  before_filter :list_municipalities, :only => [:new, :create, :update]
 
   def index
     if logged_in?
@@ -33,11 +34,11 @@ class AdoptionPetsController < ApplicationController
 
   def edit
     @adoption_pet = AdoptionPet.find(params[:id])
+    @municipalities = Municipality.all
   end
 
   def create
     @adoption_pet = AdoptionPet.new(params[:adoption_pet])
-
     if @adoption_pet.save
       flash[:notice] = "La publicación fue creada, nuestro equipo revisará la publicación y te enviaremos un correo cuando esté lista. No tardaremos, lo prometemos. Gracias!"
       redirect_to :action => "index"
@@ -78,4 +79,9 @@ class AdoptionPetsController < ApplicationController
     
     render :action => "show"
   end
+
+  protected
+    def list_municipalities
+      @municipalities = Municipality.all
+    end
 end

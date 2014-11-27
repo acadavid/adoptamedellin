@@ -30,12 +30,6 @@ $(document).ready ->
       $(this).val new_text
   $('.numbersOnly').keyup ->
     this.value = this.value.replace(/[^0-9\.]/g,'')
-  $("#adoption_pet_age, #agelist").change ->
-    fixAgeField()
-  $("#adoption_pet_age").keyup ->
-    fixAgeField()
-  $("#age").change ->
-    showAgeElements(true)
 
 $("#share_pet_on_fb").click ->
   FB.ui
@@ -62,18 +56,4 @@ updateCountdown = (x) ->
   $(".countdown_#{x.attr('id')}").text remaining + " caracteres restantes"
   return
 
-fixAgeField = ->
-  if(!$('#adoption_pet_age').val() || !$('#age :selected').val())
-    $("#adoption_pet_pet_attributes_age").val("#{$('#age :selected').val()}")
-  else
-    $("#adoption_pet_pet_attributes_age").val("#{$('#adoption_pet_age').val()} #{$('#agelist :selected').val()}")
-
-showAgeElements = (show) ->
-  fixAgeField()
-  if(show == false || !$('#age :selected').val())
-    $("#adoption_pet_age").hide()
-    $("#agelist").hide()
-  else
-    $("#adoption_pet_age").show()
-    $("#agelist").show()
 

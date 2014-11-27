@@ -15,13 +15,13 @@
   <ul>
     <span>
       <li>
-        <p><b>Sexo: </b><%= @adoption_pet.gender %></p>
+        <p><b>Sexo: </b><%= @adoption_pet.gender.titleize %></p>
       </li>
       <li>
         <p><b>Edad: </b><%= @adoption_pet.age %></p>
       </li>
       <li>
-        <p><b>Raza: </b><%= @adoption_pet.breed %></p>   
+        <p><b>Raza: </b><%= @adoption_pet.breed.titleize %></p>   
       </li>
       <li>
         <p>
@@ -33,7 +33,7 @@
       </li>
       <li>
         <p><b>Ciudad - Municipio: </b>
-          <%= @adoption_pet.municipality %></p>      
+          <%= @adoption_pet.municipality.titleize %></p>      
       </li>
       <li>
         <p><b>Barrio - Zona: </b>
