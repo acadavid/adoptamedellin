@@ -214,6 +214,7 @@ es-CO:
       pet: Mascota
       pet_contact: Contacto
       picture: Foto
+      interested_contact: Interesado
     attributes:
       pet:
         animal: El tipo de animal
@@ -225,8 +226,13 @@ es-CO:
       pet/pet_contact:
         name: El nombre del contacto
         email: El correo del contacto
+        phone: El teléfono del contacto
       pet/pictures:
         file: El archivo de la foto
+      interested_contact:
+        name: El nombre del interesado
+        email: El correo del interesado
+        phone: El teléfono del interesado
   views:
     pagination:
       first: "&laquo; Primera"
