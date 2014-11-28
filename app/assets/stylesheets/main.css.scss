@@ -82,16 +82,16 @@ footer { background:#f0f0f0; padding:25px 0; margin-top: 40px; text-align:center
 
 /* icons */
 
-i.gender {background-size: 164px; width: 27px; height: 27px; position: absolute; left: 2%; bottom: 22%;}
+i.gender {background-size: 164px; width: 27px; height: 27px; position: absolute; left: 2%; bottom: 18%;}
 i.gender.male { background-position: -40px -172px;}
 i.gender.female { background-position: -8px -170px; height: 29px;}
 
 .contact span {text-align: left; margin: 15px 0 0 15px;}
-.contact i, .div_info i { background-size: 95px; width: 18px; height: 18px; margin-right: 5px;}
-.contact .facebook_icon, .div_info .facebook_icon { background-position: -6px -77px; cursor: pointer;}
-.contact .twitter_icon, .div_info .twitter_icon  { background-position: -30px -77px; cursor: pointer;}
+.contact i, .div_right i { background-size: 95px; width: 18px; height: 18px; margin-right: 5px;}
+.contact .facebook_icon, .div_right .facebook_icon { background-position: -6px -77px; cursor: pointer;}
+.contact .twitter_icon, .div_right .twitter_icon  { background-position: -30px -77px; cursor: pointer;}
 .contact .twitter_icon  { margin-left: 10px;}
-.contact .mail_icon, .div_info .mail_icon { background-position: -52px -77px;}
+.contact .mail_icon, .div_right .mail_icon { background-position: -52px -77px;}
 
 .social { position: absolute; bottom: -6px; right: 0;}
 .social p { display: inline; margin-right: 5px;}
@@ -120,13 +120,13 @@ h2.pet_name { text-align: left; text-transform: capitalize; font-size: 25px; col
 .well .div_right { height: auto; width: 50%; padding-left: 10px; float: left; box-sizing: border-box;}
 .well .div_right label { width: 48%; display: inline-block;}
 
-.well .div_info { height: 380px; width: 50%; padding-left: 10px; box-sizing: border-box; padding-bottom: 20px; float: left; position: relative; margin-bottom: 20px;}
-.well .div_info a { margin: 0 5px 10px 0;}
-.well .div_info ul { margin: 0;}
-.well .div_info li { line-height: 25px;}
-.well .div_info #back { position: absolute; bottom: -21px; left: 0;}
-.well .div_info { font-size: 13px; text-align: justify;}
-.well .div_info span li { width: 50%; float: left; text-align: left;}
+.well .div_right { height: 380px; width: 50%; padding-left: 10px; box-sizing: border-box; padding-bottom: 20px; float: left; position: relative; margin-bottom: 20px;}
+.well .div_right a { margin: 0 5px 10px 0;}
+.well .div_right ul { margin: 0;}
+.well .div_right li { line-height: 25px;}
+.well .div_right #back { position: absolute; bottom: -21px; left: 0;}
+.well .div_right { font-size: 13px; text-align: justify;}
+.well .div_right span li { width: 50%; float: left; text-align: left;}
 
 
 /* form basic styles */
@@ -179,6 +179,12 @@ select#adoption_pet_status { width: 98%;}
 .field_with_errors :-ms-input-placeholder {color: #b94a48;}
 .field_with_errors ::-moz-placeholder {color: #550200;}
 .field_with_errors input:focus::-webkit-input-placeholder {color: #a2a2a2;}
+
+/* Faq page */
+
+.faq h3 {font-size: 1em; float: left; margin: 0; color: #A09D9D;}
+p { clear: both;}
+
 
 /* Contact page */
 
