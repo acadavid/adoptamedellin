@@ -20,17 +20,17 @@ class Pet < ActiveRecord::Base
 
   def kinf_of_animal
     unless self.animal.nil?
-      errors.add(:animal, "es inválido") unless ["Perro", "Gato"].include?(self.animal)
+      errors.add(:animal, I18n.t(".errors.messages.invalid")) unless ["perro", "gato"].include?(self.animal)
     end
   end
 
   def gender_of_animal
     unless self.gender.nil?
-      errors.add(:gender, "es inválido") unless ["Macho", "Hembra"].include?(self.gender)
+      errors.add(:gender, I18n.t(".errors.messages.invalid")) unless ["macho", "hembra"].include?(self.gender)
     end
   end
 
   def at_least_one_picture
-    errors.add(:pictures, "debe tener al menos una") if self.pictures.size < 1
+    errors.add(:pictures, I18n.t(".errors.messages.greater_than_or_equal_to", count: 1)) if self.pictures.size < 1
   end
 end

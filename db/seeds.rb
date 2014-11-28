@@ -5,3 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Municipality.create([{ municipality: 'medellin' }, 
+  { municipality: 'bello' },
+  { municipality: 'envigado' },
+  { municipality: 'itagüi' },
+  { municipality: 'sabaneta' },
+  { municipality: 'barbosa' },
+  { municipality: 'caldas' },
+  { municipality: 'la_estrella' },
+  { municipality: 'girardota' },
+  { municipality: 'copacabana' }]) unless Municipality.count == 0
