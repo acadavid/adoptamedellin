@@ -15,5 +15,11 @@ class AdoptionPet < ActiveRecord::Base
     pictures.first.file
   end
 
-  scope :unadopted_pets, -> { where(status: "unadopted")}
+  scope :unadopted_pets, -> { where(status: "unadopted") }
+
+  scope :previous_pet, -> (adoption_pet) { where('created_at < ?', adoption_pet.created_at) }
+
+  scope :next_pet, -> (adoption_pet) { where('created_at > ?', adoption_pet.created_at) }
+
+  scope :recent, -> { order("created_at DESC") }
 end

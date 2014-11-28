@@ -144,8 +144,8 @@ h2.pet_name { text-align: left; text-transform: capitalize; font-size: 25px; col
 #back { margin: 15px; color: #33bbb8;}
 
 #primary label { padding-left:25px; background:url(image-path("/assets/sprites.png")) no-repeat left; background-size: 100px;}
-#primary label[for="adoption_pet_pet_attributes_animal_valueperro"] { background-position: -55px -25px; }
-#primary label[for="adoption_pet_pet_attributes_animal_valuegato"] { background-position: -55px -46px; margin-left: 24%; }
+#primary label[for="animal_Perro"] { background-position: -55px -25px; }
+#primary label[for="animal_Gato"] { background-position: -55px -46px; margin-left: 24%; }
 #primary input[type="text"] { width: 46%; }
 #primary input[type="radio"] { margin-right:20px;vertical-align: top; margin:4px 11px 4px 8px;}
 

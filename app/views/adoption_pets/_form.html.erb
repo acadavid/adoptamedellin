@@ -32,56 +32,59 @@
       <fieldset id="primary">
         <h3>Información básica*</h3>
         <hr />
-        <%= f.label "Perro", :for => "adoption_pet_pet_attributes_animal_valueperro",:class => 'display' %>
-        <%= pet_form.radio_button :animal, :value => "perro" %>
-        <%= f.label "Gato", :for => "adoption_pet_pet_attributes_animal_valuegato", :class => 'display' %>
-        <%= pet_form.radio_button :animal, :value => "gato" %>        
+        <%= label :animal, "Perro", class: 'display' %>
+        <%= pet_form.radio_button :animal, "perro", 
+              :checked => @adoption_pet.animal.eql?("perro") %>
+        <%= label :animal, "Gato", class: 'display' %>
+        <%= pet_form.radio_button :animal, "gato", 
+              :checked => @adoption_pet.animal.eql?("gato") %>       
         <%= f.label "Nombre" %>
         <%= pet_form.text_field :name, :placeholder => 'Nombre del animal'  %>
-        <select>
-          <option value="" disabled selected style="display:none;">Edad (aproximada)</option>
-          <option>0 Meses</option>
-          <option>1 Mes</option>
-          <option>2  Meses</option>
-          <option>3 Meses</option>
-          <option>4 Meses</option>
-          <option>5 Meses</option>
-          <option>6 Meses</option>
-          <option>7 Meses</option>
-          <option>8 Meses</option>
-          <option>9 Meses</option>
-          <option>10 Meses</option>
-          <option>11 Meses</option>
-          <option>12 Meses</option>
-          <option>1 Año</option>
-          <option>2 Años</option>
-          <option>3 Años</option>
-          <option>4 Años</option>
-          <option>5 Años</option>
-          <option>6 Años</option>
-          <option>7 Años</option>
-          <option>8 Años</option>
-          <option>9 Años</option>
-          <option>10 Años</option>
-          <option>11 Años</option>
-          <option>12 Años</option>
-        </select>
+        <%= pet_form.select :age,
+              options_for_select( 
+                [["Seleccione Edad (Aprox)", "edad"],
+                ["0 Meses"],
+                ["1 Mes"],
+                ["2 Meses"],
+                ["3 Meses"],
+                ["4 Meses"],
+                ["5 Meses"],
+                ["6 Meses"],
+                ["7 Meses"],
+                ["8 Meses"],
+                ["9 Meses"],
+                ["10 Meses"],
+                ["11 Meses"],
+                ["12 Meses"],
+                ["1 Año"],
+                ["2 Años"],
+                ["3 Años"],
+                ["4 Años"],
+                ["5 Años"],
+                ["6 Años"],
+                ["7 Años"],
+                ["8 Años"],
+                ["9 Años"],
+                ["10 Años"],
+                ["11 Años"],
+                ["12 Años"]],
+                selected: @adoption_pet.age.nil? ? "edad" : @adoption_pet.age , 
+                disabled: "edad") %>
 
         <%= f.label "Raza" %>
         <%= pet_form.text_field :breed, :placeholder => 'Raza' %>
-        <select>
-          <option value="" disabled selected style="display:none;">Sexo</option>
-          <option>Macho</option>
-          <option> Hembra</option>
-        </select>
-
+        <%= pet_form.select :gender,
+              options_for_select( [["Sexo"], ["Macho","macho"], ["Hembra","hembra"]], 
+              selected: @adoption_pet.gender.nil? ? "Sexo" : @adoption_pet.gender, 
+              disabled: "Sexo" ) %>
       </fieldset>
 
       <fieldset>
         <h3>Ubicación*</h3>
         <hr />
         <%= f.label "Municipio" %>
-        <%= pet_form.text_field :municipality, :placeholder => 'Municipio' %>
+        <%= pet_form.select :municipality, 
+              options_for_select(@municipalities.map { |m| [m.municipality.titleize, m.municipality] } ) %>
         <%= f.label "Ubicación" %>
         <%= pet_form.text_field :location, :placeholder => 'Barrio o zona' %>        
       </fieldset>
@@ -92,7 +95,7 @@
           <hr/>
           <%= f.label "Estado" %>
           <%= f.select :status, 
-              options_for_select(AdoptionPet::STATES.map{|s| [s.humanize,s]}) %>     
+              options_for_select(AdoptionPet::STATES.map{|s| [s.humanize,s]}, @adoption_pet.status) %>     
         </fieldset>
       <% end %>
  
