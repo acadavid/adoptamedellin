@@ -4,18 +4,18 @@
 body { font-family: 'Nobile', sans-serif; color:#a2a2a2; }
 
 h2, h3, h4{ color:#3e4248; text-align:center; }
-
 h2 { font-size: 20px; margin: 10px 0 25px; }
-
 h4 { padding-bottom: 15px;}
 
 hr { width:100%;}
+section hr { margin-top:0; clear:both; }
 
 header { width: 100%; height: auto; display: inline-block;}
+header a img { display: inline-block; float: left; margin-top: 15px;}
+
+nav { display: inline-block; float: right;}
 
 select { height: 25px;}
-
-section hr { margin-top:0; clear:both; }
 
 ul li { list-style-type:none;}
 
@@ -25,45 +25,29 @@ input[type="file"]{	width: 80%;}
 
 div.picture { margin-bottom: 20px;}
 
-header a img { display: inline-block; float: left;}
-
 .nav.nav-pills.pull-right { padding: 15% 0 0 }
-
 .nav-pills > .active > a { background-color:#f0f0f0; color:#33bbb8;}
 
 .btn { margin-right: 1%; font-family: 'helvetica neue'; background:#33bbb8; font-weight:bold; border:0; ; -moz-transition: all 0.5s; -webkit-transition: all 0.5s; transition: all 0.5s; padding:10px 43px; text-transform:uppercase;}
 
-nav { display: inline-block; float: right;}
-
-section .span4px { margin: 5% 0 0; }
-  
-section .span4px p { font-size:1.1em; text-align: center; line-height: 24px; }
- 
+section .span4px { margin: 5% 0 0; }  
+section .span4px p { font-size:1.1em; text-align: center; line-height: 24px; } 
 section .span6px.pull-right {text-align: center;margin: 0; background: url(image-path("dog_and_cat_staring.png")) center -6px no-repeat; height: 278px; -moz-background-size: 343px; -webkit-background-size: 343px; background-size: 343px; }
-
 section .span6px .btn { padding: 10px 43px; color: white; margin-top: 0;}
-
 section .span6px  { font-size: 0.85em; color:#3e4248;}
 
 input { width: 46%;}
 
 .well { box-shadow:none; background:#fff; border:none; padding: 30px 0 0; position: relative;}
-
 .well > ul { text-align: center; margin: 0; margin-top: -25px; width: 100%;}
-
 .well > ul > li { display:inline-block; width: 31.3%; margin: 0 1%; float: left;}
+.well .span5px { width: 50%; float: left;}
+.well h2,h4 {color: #999797; clear: both; }
+.well i { background: url("/assets/sprites.png") no-repeat; display: inline-block; vertical-align: middle; line-height: 15px; text-indent: -999em;} 
+.well span {display: block; text-align: center; font-size: 13px;}
+.well a:hover { color: #33bbb8;}
 
 .container { width: 70%;}
-
-.well .span5px { width: 50%; float: left;}
-
-.well h2,h4 {color: #999797; clear: both; }
-
-.well i { background: url("/assets/sprites.png") no-repeat; display: inline-block; vertical-align: middle; line-height: 15px; text-indent: -999em;} 
-
-.well span {display: block; text-align: center; font-size: 13px;}
-
-.well a:hover { color: #33bbb8;}
 
 footer { background:#f0f0f0; padding:25px 0; margin-top: 40px; text-align:center; }
 
@@ -74,16 +58,16 @@ footer { background:#f0f0f0; padding:25px 0; margin-top: 40px; text-align:center
 /* single_post thumbnail */
 
 .well .single_post { position:relative; display:inline-block; width: 90%; margin:32px auto 0; vertical-align: top; border-radius: 3px; overflow: hidden;}
-.well .single_post h3 { line-height: 20px; position: absolute; bottom: 0; left: 0; margin: 0; font-weight: 200; font-size: 1.2em; background: rgba(16, 103, 89, 0.59); width: 85%; text-align: left; text-transform: capitalize; padding: 4%; padding-left: 15%;}
+.well .single_post h3 { line-height: 20px; position: absolute; bottom: 0; left: 0; margin: 0; font-weight: 200; font-size: 1.2em; background: rgba(3, 11, 10, 0.59); width: 85%; text-align: left; text-transform: capitalize; padding: 4%; padding-left: 15%;}
 .well .single_post h3 a { color: #fff; text-decoration:none;}
 
 .well .single_post .overlay { overflow: hidden;}
 .well .single_post .overlay img { width: 100%;}
-.well .single_post a.overlay  { height: 100%; width:100%; position:absolute; background: #b9f4c5; opacity: 0; -moz-transition: all 2s; -webkit-transition: all 2s; transition: all 2s; text-indent: -999em; }
+.well .single_post a.overlay  { height: 100%; width:100%; position:absolute; background: #ECECEC; opacity: 0; -moz-transition: all 2s; -webkit-transition: all 2s; transition: all 2s; text-indent: -999em; }
 .well .single_post a.overlay:hover { text-decoration:underline ;-moz-opacity:0.4;  -webkit-opacity:0.4; opacity:0.4; }
 
 .well .single_post span { width: 50px; height: 50px; position: absolute; right: 7px; bottom: 5px; border-radius: 50%; background: #fff;}
-.well .single_post span p { color:#145751; width: 35px; margin: 10% auto; line-height: 130%; }
+.well .single_post span p { color:#0E1010; width: 35px; margin: 10% auto; line-height: 130%; }
 .well .single_post span p b { font-size: 25px;}
 
 
@@ -102,10 +86,17 @@ i.gender {background-size: 164px; width: 27px; height: 27px; position: absolute;
 i.gender.male { background-position: -40px -172px;}
 i.gender.female { background-position: -8px -170px; height: 29px;}
 
+.contact span {text-align: left; margin: 15px 0 0 15px;}
+.contact i, .div_info i { background-size: 95px; width: 18px; height: 18px; margin-right: 5px;}
+.contact .facebook_icon, .div_info .facebook_icon { background-position: -6px -77px; cursor: pointer;}
+.contact .twitter_icon, .div_info .twitter_icon  { background-position: -30px -77px; cursor: pointer;}
+.contact .twitter_icon  { margin-left: 10px;}
+.contact .mail_icon, .div_info .mail_icon { background-position: -52px -77px;}
+
 .social { position: absolute; bottom: -6px; right: 0;}
 .social p { display: inline; margin-right: 5px;}
 
-i.true, i.false { background: url(image-path("/assets/sprites.png")) no-repeat; background-size: 95px; border-radius: 5px; border: 2px solid #c0bcbc; width: 13px; height: 12px;}
+i.true, i.false { background: url(image-path("/assets/sprites.png")) no-repeat; background-size: 95px; width: 12px; height: 12px;}
 i.true { background-position: -32px -27px;}
 i.false { background-position: -9px -27px;}
 
@@ -114,6 +105,7 @@ i.false { background-position: -9px -27px;}
 a.add { background-position: -5px -112px; text-decoration: none; color: #a2a2a2; padding: 2px 4px 4px 24px;}
 .erase:hover, .add:hover { -moz-opacity:1; -webkit-opacity: 1; opacity: 1;}
 a.add:hover { color: #7E7E7E; text-decoration: none; background-position: -5px -141px;}
+
 
 /* single_pet page */
 
@@ -199,12 +191,7 @@ select#adoption_pet_status { width: 98%;}
 
 .contact { width: 100%; height: auto; display: inline-block; background: rgba(166, 30, 30, 0.09); padding-bottom: 10px; margin-top: 20px; color: #9B9B9B; clear: both;}
 .contact p { margin: 0 0 2px; }
-.contact span {text-align: left; margin: 15px 0 0 15px;}
-.contact i, .div_info i { background-size: 95px; width: 18px; height: 18px; margin-right: 5px;}
-.contact .facebook_icon, .div_info .facebook_icon { background-position: -6px -77px; cursor: pointer;}
-.contact .twitter_icon, .div_info .twitter_icon  { background-position: -30px -77px; cursor: pointer;}
-.contact .twitter_icon  { margin-left: 10px;}
-.contact .mail_icon, .div_info .mail_icon { background-position: -52px -77px;}
+
 
 /* footer */
 

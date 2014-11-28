@@ -9,6 +9,7 @@ Adoptamedellin::Application.routes.draw do
 
   get "logout" => "sessions#destroy", :as => "logout"
   get "login" => "sessions#new", :as => "login"
+  get "faq" => "application#faq"
   get "contact" => "application#contact"
 
   root :to => 'adoption_pets#index'
