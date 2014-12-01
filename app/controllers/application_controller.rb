@@ -4,4 +4,8 @@ class ApplicationController < ActionController::Base
   def contact
   	render 'others/contact'
   end
+
+  def faq
+  	render 'others/faq'
+  end
 end
