@@ -79,8 +79,8 @@ nav.pagination span { float: left; margin: 10px;}
 .well .arrow i {background: url("/assets/sprites.png") no-repeat #33bbb8; border-radius: 10px; margin-top: -2px; width: 19px; height: 19px; background-size: 145px;}
 .well .arrow .previous { background-position: -7px -95px; margin-right: 5px;}
 .well .arrow .next { background-position: -27px -95px; margin-left: 5px;}
-.well .left { position: absolute; left: 0; top: -5px;}
-.well .right { position: absolute; right: 0; top: -5px;}
+.well .arrow_left { position: absolute; left: 0; top: -5px;}
+.well .arrow_right { position: absolute; right: 0; top: -5px;}
 
 
 /* icons */
@@ -114,7 +114,7 @@ a.add:hover { color: #7E7E7E; text-decoration: none; background-position: -5px -
 
 h2.pet_name { text-align: left; text-transform: capitalize; font-size: 25px; color: #666; margin: 0 0 5px;}
 
-.well .div_left { max-height: 380px; width: 50%; float: left; overflow: hidden; box-sizing: border-box; padding-right: 10px;}
+.well .div_left { max-height: 442px; width: 50%; float: left; box-sizing: border-box; padding-right: 10px;}
 .well .div_left figure { width: 100%; margin: 0; overflow: hidden;}
 .well .div_left label { width: 48%; display: inline-block;}
 .well .div_left img {width: 100%; }
@@ -123,13 +123,24 @@ h2.pet_name { text-align: left; text-transform: capitalize; font-size: 25px; col
 .well .div_right { height: auto; width: 50%; padding-left: 10px; float: left; box-sizing: border-box;}
 .well .div_right label { width: 48%; display: inline-block;}
 
-.well .div_right { height: 380px; width: 50%; padding-left: 10px; box-sizing: border-box; padding-bottom: 20px; float: left; position: relative; margin-bottom: 20px;}
+.well .div_right { height: 460px; width: 50%; padding-left: 10px; box-sizing: border-box; padding-bottom: 20px; float: left; position: relative; margin-bottom: 20px;}
 .well .div_right a { margin: 0 5px 10px 0;}
 .well .div_right ul { margin: 0;}
 .well .div_right li { line-height: 25px;}
 .well .div_right #back { position: absolute; bottom: -21px; left: 0;}
 .well .div_right { font-size: 13px; text-align: justify;}
 .well .div_right span li { width: 50%; float: left; text-align: left;}
+
+
+/* carousel */
+
+.carousel-control { background: url(http://localhost:3000/assets/sprites.png) no-repeat rgb(107, 101, 101); text-indent: -999em; width: 25px; height: 25px; top: 50%;}
+a.carousel-control { width: 20px; height: 20px;}
+a.left.carousel-control { background-position: -9px -113px; left: 2%;}
+a.right.carousel-control { background-position: -33px -113px; right: 2%;}
+.carousel-indicators { top: initial; bottom: -15px; right: 35%;}
+.carousel-indicators li { background: rgba(62, 84, 60, 0.25);}
+.carousel-indicators li.active { background: #4FC0B3}
 
 
 /* form basic styles */
@@ -206,3 +217,4 @@ p { clear: both;}
 
 footer ul { display: inline-block;}
 footer li { float: left; width: 70px; height: 70px; background: #fff; margin: 0 10px;}
+
