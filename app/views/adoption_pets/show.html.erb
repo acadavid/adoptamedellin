@@ -2,12 +2,33 @@
 <%= next_pet_link(@adoption_pet) %>
 
 <div class="div_left">
-  <figure>
-    <%= image_tag @adoption_pet.pictures.first.file.url %>
-  </figure>
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <% @pictures.each_with_index { |p, index| %>
+        <li data-target="#carousel-example-generic" data-slide-to="<%= index %>" <%= "class = #{'active'}" if index == 0 %> ></li>
+      <% } %>
+    </ol> 
+
+    <div class="carousel-inner" >
+      <% @pictures.each_with_index { |p, index| %>
+        <div class="<%= index == 0 ? 'item active' : 'item' %>"><%= image_tag p.file.thumbnail.url %> </div>
+      <% } %>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 </div>
 
-<div class="div_right">
+<div class="div_right div_info">
   <h2 class="pet_name">
     <%= @adoption_pet.name %>
   </h2>
@@ -26,11 +47,9 @@
       <li>
         <p>
           <b>Vacunas: </b>
-            <i id="vaccines" class="true" title="Está vacunado">Está vacunado</i>
-            <i id="vaccines" class="false" title="No está vacunado" style="display: none;">Sin vacunar</i>
+            <i id="vaccines" class='<%= "#{@adoption_pet.vaccines}" %>' ></i>
           <b>Esterilizado: </b>
-            <i id="neutered" class="true" title="Está esterilizado">Está Esterilizado</i>
-            <i id="neutered" class="false" title="No está esterilizado"style="display: none;">Sin esterilizar</i>
+            <i id="neutered" class='<%= "#{@adoption_pet.neutered}" %>' ></i>
         </p>
       </li>
       <li>

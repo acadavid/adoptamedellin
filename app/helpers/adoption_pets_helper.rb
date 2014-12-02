@@ -2,7 +2,7 @@ module AdoptionPetsHelper
 
   def previous_pet_link(adoption_pet)
     unless previous_pet(adoption_pet).nil?
-      link_to adoption_pet_path(previous_pet(adoption_pet)), class: "arrow left" do
+      link_to adoption_pet_path(previous_pet(adoption_pet)), class: "arrow arrow_left" do
         "#{content_tag(:i, '', :class=>'previous')} Anterior".html_safe
       end
     end
@@ -10,7 +10,7 @@ module AdoptionPetsHelper
 
   def next_pet_link(adoption_pet)
     unless next_pet(adoption_pet).nil?
-      link_to adoption_pet_path(next_pet(adoption_pet)), class: "arrow right" do
+      link_to adoption_pet_path(next_pet(adoption_pet)), class: "arrow arrow_right" do
         "Siguiente #{content_tag(:i, '', :class=>'next')}".html_safe
       end
     end

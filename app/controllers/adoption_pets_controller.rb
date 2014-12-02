@@ -20,6 +20,7 @@ class AdoptionPetsController < ApplicationController
     @adoption_pet = AdoptionPet.find(params[:id])
     @interested_contact = InterestedContact.new
     @friend_mailer = RecommendMailer.new
+    @pictures = Picture.all
 
     respond_with @adoption_pet
   end
