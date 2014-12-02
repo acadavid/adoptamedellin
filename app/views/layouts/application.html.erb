@@ -27,8 +27,8 @@
         <%= link_to(image_tag(asset_path("adopta_medellin_logo.png"), :width => "320"), root_path) %>
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li class="active"><%= link_to "Mascotas", root_path  %></li>
-            <li><%= link_to "Preguntas frecuentes", faq_path  %></li>
+            <li class="active"><%= link_to "Inicio", root_path  %></li>
+            <li><%= link_to "Preguntas", faq_path  %></li>
             <li><%= link_to "Nosotros", "/contact"  %></li>
             <% if logged_in? %>
               <li><%= link_to "Logout", logout_path  %></li>
