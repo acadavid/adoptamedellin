@@ -25,6 +25,7 @@ group :test, :development do
   gem 'spork-rails'
   gem 'factory_girl_rails'
   gem 'faker'
+  gem 'debugger'
 end
 
 gem 'jquery-rails', '~> 3.1.2'
@@ -46,6 +47,3 @@ gem "kaminari"
 
 # Deploy with Capistrano
 # gem 'capistrano'
-
-# To use debugger
-gem 'debugger'
