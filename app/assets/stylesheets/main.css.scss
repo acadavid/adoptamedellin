@@ -117,7 +117,7 @@ h2.pet_name { text-align: left; text-transform: capitalize; font-size: 25px; col
 .well .div_left { height: auto; width: 50%; float: left; box-sizing: border-box; padding-right: 10px;}
 .well .div_left img {width: 100%; }
 
-.well .div_left label, .well .div_right label { width: 50%; display: inline-block;}
+.well .div_left label, .well .div_right label { width: 49%; display: inline-block;}
 
 .well .div_right { position: relative; height: auto; width: 50%; margin-bottom: 20px; padding: 0 0 20px 10px; float: left; box-sizing: border-box; font-size: 13px; text-align: justify;}
 .well .div_right a { margin: 0 5px 10px 0;}
@@ -125,7 +125,7 @@ h2.pet_name { text-align: left; text-transform: capitalize; font-size: 25px; col
 .well .div_right li, .well .div_left li { line-height: 25px;}
 .div_right.div_info { height: 460px;}
 .well .div_right #back { position: absolute; bottom: -21px; left: 0;}
-.well .div_right span li { width: 50%; float: left; text-align: left;}
+.well .div_right span li { width: 50%; float: left; text-align: left; height: 30px;}
 
 
 /* carousel */
@@ -151,7 +151,7 @@ select#adoption_pet_status { width: 98%;}
 /* New adoption_pet */
 
 #new_adoption_pet input[type="text"], #new_adoption_pet input[type="email"], #new_adoption_pet input[type="phone"], 
-[id^="edit_adoption_pet"] input[type="text"], [id^="edit_adoption_pet"] input[type="email"], [id^="edit_adoption_pet"] input[type="phone"] { width: 46%; vertical-align:top;}
+[id^="edit_adoption_pet"] input[type="text"], [id^="edit_adoption_pet"] input[type="email"], [id^="edit_adoption_pet"] input[type="phone"] { width: 45%; vertical-align:top;}
 #new_adoption_pet .span5px, [id^="edit_adoption_pet"] .span5px { margin:0; }
 #new_adoption_pet h3, [id^="edit_adoption_pet"] h3 { margin: 0; font-size: 13px; color: #5a5a5a; text-align: left;line-height: 24px; font-weight: normal;}
 #new_adoption_pet hr, [id^="edit_adoption_pet"] hr { margin: 0 0 11px 0; border: 1px solid #828282; border-width: 1px 0 0; box-shadow: none;}
