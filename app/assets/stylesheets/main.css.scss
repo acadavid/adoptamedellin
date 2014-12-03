@@ -124,7 +124,7 @@ h2.pet_name { text-align: left; text-transform: capitalize; font-size: 25px; col
 .well .div_right ul { margin: 0;}
 .well .div_right li, .well .div_left li { line-height: 25px;}
 .div_right.div_info { height: 460px;}
-.well #back { margin: 0;}
+.well #back { margin-left: 15px;}
 .well .div_right span li { width: 50%; float: left; text-align: left; height: 30px;}
 
 
@@ -213,5 +213,5 @@ p { clear: both;}
 
 footer ul { display: inline-block;}
 footer li { float: left; width: 70px; height: 70px; background: #fff; margin: 0 10px;}
-footer h4{ font-style: italic;}
+footer h4{ font-style: italic; margin: 0 auto 10px; width: 235px;}
 
