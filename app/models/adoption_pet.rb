@@ -21,5 +21,5 @@ class AdoptionPet < ActiveRecord::Base
 
   scope :next_pet, -> (adoption_pet) { where('created_at > ?', adoption_pet.created_at) }
 
-  scope :recent, -> { order("created_at DESC") }
+  scope :recently_created, -> { order("created_at DESC") }
 end

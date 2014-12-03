@@ -8,9 +8,9 @@ class AdoptionPetsController < ApplicationController
 
   def index
     if logged_in?
-      @pets = AdoptionPet.page(params[:page]).per(6)
+      @pets = AdoptionPet.page(params[:page]).per(6).recently_created
     else
-      @pets = AdoptionPet.page(params[:page]).per(6).unadopted_pets
+      @pets = AdoptionPet.page(params[:page]).per(6).unadopted_pets.recently_created
     end
 
     respond_with @pets
@@ -19,9 +19,8 @@ class AdoptionPetsController < ApplicationController
   def show
     @adoption_pet = AdoptionPet.find(params[:id])
     @interested_contact = InterestedContact.new
-    @friend_mailer = RecommendMailer.new
-    @pictures = Picture.all
-
+    @friend_mailer = RecommendMailer.new 
+ 
     respond_with @adoption_pet
   end
 

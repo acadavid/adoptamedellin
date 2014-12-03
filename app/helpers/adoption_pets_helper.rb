@@ -16,9 +16,13 @@ module AdoptionPetsHelper
     end
   end
 
+  def hide_element_single_photo(adoption_pet)
+    "display: none;" if adoption_pet.pictures.size == 1
+  end
+
   private
   def previous_pet(adoption_pet)
-    @previous_pet = AdoptionPet.previous_pet(adoption_pet).recent
+    @previous_pet = AdoptionPet.previous_pet(adoption_pet).recently_created
     if logged_in?
       @previous_pet.limit(1).first
     else

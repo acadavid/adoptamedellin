@@ -1,6 +1,9 @@
 @media only screen and (min-width: 1400px){
-	.well.clearfix, header{
-			width: 960px;
+	.well, header{
+			width: 100%;
+	}
+	.container{
+		width: 900px;
 	}
 }
 
@@ -122,6 +125,9 @@
 	}
 	i.gender.female{
 		background-position: -7px -135px;
+	}
+	#new_adoption_pet input[type="text"]{
+		width: 120px;
 	}
 }
 
@@ -390,6 +396,10 @@
 	.well .arrow_left{
 		left: 10px;
 	}
+	select{
+		width: 103%;
+		margin: 0 3px;
+	}
 	/***************
 	contact styles
 	***************/
@@ -417,5 +427,10 @@
 		background-position: -8px -155px;
 		height: 27px;
 	}	
+	footer{
+		width: 270px;
+		margin: 0 auto 15px;
+		font-size: 1em;
+	}
 }
 

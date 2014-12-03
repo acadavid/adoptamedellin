@@ -27,7 +27,7 @@ group :test, :development do
   gem 'faker'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 3.1.2'
 gem "fog", "~> 1.3.1"
 gem 'carrierwave'
 gem "nested_form"
