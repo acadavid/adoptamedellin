@@ -4,27 +4,23 @@
 <div class="div_left">
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <% @pictures.each_with_index { |p, index| %>
+    <ol class="carousel-indicators" style="<%= hide_element_single_photo(@adoption_pet) %> ">
+      <% @adoption_pet.pictures.each_with_index { |p, index| %>
         <li data-target="#carousel-example-generic" data-slide-to="<%= index %>" <%= "class = #{'active'}" if index == 0 %> ></li>
       <% } %>
     </ol> 
 
     <div class="carousel-inner" >
-      <% @pictures.each_with_index { |p, index| %>
+      <% @adoption_pet.pictures.each_with_index { |p, index| %>
         <div class="<%= index == 0 ? 'item active' : 'item' %>"><%= image_tag p.file.thumbnail.url %> </div>
       <% } %>
     </div>
 
     <!-- Controls -->
-    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev" 
+        style="<%= hide_element_single_photo(@adoption_pet) %> "></a>
+    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next" 
+        style="<%= hide_element_single_photo(@adoption_pet) %>"></a>
   </div>
 </div>
 

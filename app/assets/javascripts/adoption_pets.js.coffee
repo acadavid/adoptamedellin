@@ -16,7 +16,6 @@ $("#new_interested_contact").submit (e)->
       $("#adoption_form").html "#{data}"
 
 $(document).ready ->
-  showAgeElements(false)
   updateCountdown($('#adoption_pet_pet_attributes_story'))
   updateCountdown($('#adoption_pet_temperament'))
   $("#adoption_pet_pet_attributes_story, #adoption_pet_temperament").change updateCountdown($(this))
@@ -52,7 +51,7 @@ $("#share_pet_on_twitter").click (e) ->
 
 
 updateCountdown = (x) ->
-  remaining = 450 - $(x).val().length
+  remaining = 350 - $(x).val().length
   $(".countdown_#{x.attr('id')}").text remaining + " caracteres restantes"
   return
 

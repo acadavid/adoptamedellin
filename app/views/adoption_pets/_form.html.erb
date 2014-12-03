@@ -43,31 +43,31 @@
         <%= pet_form.select :age,
               options_for_select( 
                 [["Seleccione Edad (Aprox)", "edad"],
-                ["0 Meses"],
-                ["1 Mes"],
-                ["2 Meses"],
-                ["3 Meses"],
-                ["4 Meses"],
-                ["5 Meses"],
-                ["6 Meses"],
-                ["7 Meses"],
-                ["8 Meses"],
-                ["9 Meses"],
-                ["10 Meses"],
-                ["11 Meses"],
-                ["12 Meses"],
-                ["1 Año"],
-                ["2 Años"],
-                ["3 Años"],
-                ["4 Años"],
-                ["5 Años"],
-                ["6 Años"],
-                ["7 Años"],
-                ["8 Años"],
-                ["9 Años"],
-                ["10 Años"],
-                ["11 Años"],
-                ["12 Años"]],
+                ["0 meses"],
+                ["1 mes"],
+                ["2 meses"],
+                ["3 meses"],
+                ["4 meses"],
+                ["5 meses"],
+                ["6 meses"],
+                ["7 meses"],
+                ["8 meses"],
+                ["9 meses"],
+                ["10 meses"],
+                ["11 meses"],
+                ["12 meses"],
+                ["1 año"],
+                ["2 años"],
+                ["3 años"],
+                ["4 años"],
+                ["5 años"],
+                ["6 años"],
+                ["7 años"],
+                ["8 años"],
+                ["9 años"],
+                ["10 años"],
+                ["11 años"],
+                ["12 años"]],
                 selected: @adoption_pet.age.nil? ? "edad" : @adoption_pet.age , 
                 disabled: "edad") %>
 
@@ -108,7 +108,7 @@
         <span class="countdown_adoption_pet_pet_attributes_story pull-right"></span>
         <hr />
         <%= f.label "Historia de la mascota" %>
-        <%= pet_form.text_area :story, :placeholder => 'Historia de la mascota (notas adicionales)', :rows => 3, :maxlength => 450%>
+        <%= pet_form.text_area :story, :placeholder => 'Historia de la mascota (notas adicionales)', :rows => 3, :maxlength => 350%>
       </fieldset>
 
       <fieldset>
@@ -122,7 +122,7 @@
         <%= f.label "Esterilizado?", :for => "adoption_pet_neutered", :class => 'display' %>
         <%= f.check_box :neutered %>
         <%= f.label "Describa el temperamento de la mascota" %>        
-        <%= f.text_area :temperament, :placeholder => 'Describa el temperamento de la mascota', :rows => 3, :maxlength => 450 %>
+        <%= f.text_area :temperament, :placeholder => 'Describa el temperamento de la mascota', :rows => 3, :maxlength => 350 %>
       </fieldset>
 
       <div class="picture">
