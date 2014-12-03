@@ -12,7 +12,7 @@
 
     <div class="carousel-inner" >
       <% @adoption_pet.pictures.each_with_index { |p, index| %>
-        <div class="<%= index == 0 ? 'item active' : 'item' %>"><%= image_tag p.file.thumbnail.url %> </div>
+        <div class="<%= index == 0 ? 'item active' : 'item' %>"><%= image_tag p.file.show.url %> </div>
       <% } %>
     </div>
 
