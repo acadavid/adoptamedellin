@@ -20,6 +20,16 @@ module AdoptionPetsHelper
     "display: none;" if adoption_pet.pictures.size == 1
   end
 
+  def load_index_picture(pet)
+    pic_file = pet.pictures.first.file
+
+    if pet.adopted?
+      image_tag pic_file.adopted.url, alt: "Vista previa de la foto de una mascota en adopción"
+    else
+      image_tag pic_file.index.url, alt: "Vista previa de la foto de una mascota en adopción"
+    end
+  end
+
   private
   def previous_pet(adoption_pet)
     @previous_pet = AdoptionPet.previous_pet(adoption_pet).recently_created

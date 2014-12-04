@@ -26,7 +26,4 @@ class AdoptionPet < ActiveRecord::Base
     end
   end
 
-  def first_picture_file
-    pictures.first.file
-  end
 end
