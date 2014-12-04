@@ -10,7 +10,7 @@ class AdoptionPetsController < ApplicationController
     if logged_in?
       @pets = AdoptionPet.page(params[:page]).per(6).recently_created
     else
-      @pets = AdoptionPet.page(params[:page]).per(6).unadopted_pets.recently_created
+      @pets = AdoptionPet.page(params[:page]).per(6).not_adopted_pets.recently_created
     end
 
     respond_with @pets
