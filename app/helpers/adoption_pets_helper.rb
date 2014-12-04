@@ -24,9 +24,9 @@ module AdoptionPetsHelper
     pic_file = pet.pictures.first.file
 
     if pet.adopted?
-      image_tag pic_file.adopted.url, alt: "Vista previa de la foto de una mascota en adopción"
+      image_tag pic_file.adopted.url, alt: "Vista previa mascota adoptada"
     else
-      image_tag pic_file.index.url, alt: "Vista previa de la foto de una mascota en adopción"
+      image_tag pic_file.index.url, alt: "Vista previa mascota en adopción"
     end
   end
 
