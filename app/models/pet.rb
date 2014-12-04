@@ -7,7 +7,7 @@ class Pet < ActiveRecord::Base
   validates :location, :presence => true
   validates :municipality, :presence => true
   validates :pet_contact, :presence => true
-  validate :kinf_of_animal
+  validate :kind_of_animal
   validate :gender_of_animal
   validate :at_least_one_picture
 
@@ -18,7 +18,7 @@ class Pet < ActiveRecord::Base
 
   accepts_nested_attributes_for :pictures, :pet_contact
 
-  def kinf_of_animal
+  def kind_of_animal
     unless self.animal.nil?
       errors.add(:animal, I18n.t(".errors.messages.invalid")) unless ["perro", "gato"].include?(self.animal)
     end
