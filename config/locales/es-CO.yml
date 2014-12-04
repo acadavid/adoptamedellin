@@ -227,6 +227,7 @@ es-CO:
         name: El nombre del contacto
         email: El correo del contacto
         phone: El teléfono del contacto
+        mobile: El celular del contacto
       pet/pictures:
         file: El archivo de la foto
       interested_contact:
