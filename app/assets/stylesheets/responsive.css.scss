@@ -1,9 +1,9 @@
 @media only screen and (min-width: 1400px){
 	.well, header{
-			width: 100%;
+		width: 100%;
 	}
 	.container{
-		width: 900px;
+		width: 1200px;
 	}
 }
 
@@ -15,8 +15,11 @@
 	section .span6px{
 		width: 50%;
 	}
-	.well.clearfix, header{
-			width: 900px;
+	.container{
+			width: 960px;
+	}
+	.well .div_left{
+		width: 49%;
 	}
 }
 
@@ -25,16 +28,13 @@
 	/***************
 	home styles
 	***************/
-	header a img {
-		width: 45%;
-		margin-top: 10px;
-	}
 	.well{
 		padding: 0;
 	}	
 	section .span4px{
-		margin: 10px 0 0;
+		margin: 20px 10px 0;
 		padding: 15px;
+		width: 46%;
 	}
 	section .span6px.pull-right{
 		background-position: center 20px;
@@ -55,41 +55,29 @@
 	new adoption pet styles
 	***************/
 	#primary input[type="text"], #new_adoption_pet input[type="text"], #new_adoption_pet input[type="email"], #new_adoption_pet input[type="phone"], [id^="edit_adoption_pet"] input[type="text"], [id^="edit_adoption_pet"] input[type="email"], [id^="edit_adoption_pet"] input[type="phone"]{
-		width: 44%;
+		width: 43%;
 	}
 	/***************
 	single_pet page styles
 	***************/
 	.well .div_left{
-		width: 100%;
+		width: 49%;
 		padding-right: 0;
 	}
 	.faq.div_right{
-		width: 100%;
+		width: 49%;
 		padding-left: 0;
 	}
-	.well .div_left figure{
-		margin-top: 35px;
-		max-height: 500px;
-	}
-	.well .div_info{
-		width: 100%;
-		padding: 0 10px 0 0;
-		margin: 15px 0 40px;
-		height: auto;
-	}
-	.well .div_info #back{
-		margin: -10px 0;
+	.div_right.div_info{
+		margin: 25px 0 0 10px;
+		width: 48%;	
 	}
 	.well .div_info .social{
-		bottom: -30px;
+		bottom: 0px;
 	}
 	#adoption_form{
 		width: 50%;
 		padding-right: 10px;
-	}
-	input{
-		width: 96%;
 	}
 	.alert_info{
 		width: 98%;
@@ -100,8 +88,8 @@
 		height: 40px;
 		padding-bottom: 0;
 	}
-	.well .div_right label{
-		width: auto;
+	.well .div_left label, .well .div_right label{
+		width: 48%;
 	}
 	div.alert.alert-success.fade.in{
 		margin: 30px 0 -15px;
@@ -126,8 +114,8 @@
 	i.gender.female{
 		background-position: -7px -135px;
 	}
-	#new_adoption_pet input[type="text"]{
-		width: 120px;
+	.container{
+		width: 90%;
 	}
 }
 
@@ -136,16 +124,25 @@
 	home styles
 	***************/
 	.container{
-		width: 80%;
+		width: 95%;
 	}
 	/***************
 	new adoption pet styles
 	***************/
 	#primary input[type="text"], #new_adoption_pet input[type="text"], #new_adoption_pet input[type="email"], #new_adoption_pet input[type="phone"], [id^="edit_adoption_pet"] input[type="text"], [id^="edit_adoption_pet"] input[type="email"], [id^="edit_adoption_pet"] input[type="phone"]{
-		width: 42%;
+		width: 43%;
 	}
 	#new_adoption_pet .btn{
 		margin: 0;
+	}
+	#primary label[for="animal_Gato"]{
+		margin-left: 0;
+	}
+	#new_adoption_pet fieldset > input[type="checkbox"], [id^="edit_adoption_pet"] fieldset > input[type="checkbox"]{
+		margin-right: 0;
+	}
+	span.countdown_adoption_pet_pet_attributes_story.pull-right, span.countdown_adoption_pet_temperament.pull-right{
+		display: none;
 	}
 	/***************
 	contact styles
@@ -154,6 +151,56 @@
 		background-size: 420px;
 		height: 160px
 	}
+	/***************
+	single_pet page styles
+	***************/
+	.well .div_left{
+		width: 100%;
+		padding-right: 0;
+	}
+	.faq.div_right{
+		width: 100%;
+		padding-left: 0;
+	}
+	.well .div_left figure{
+		margin-top: 35px;
+		max-height: 500px;
+	}
+	.well .div_right{
+		width: 100%;
+		padding: 0 10px 0 0;
+		margin: 15px 0 40px;
+		height: auto;
+	}
+	input{
+		width: 96%;
+	}
+	.alert_info{
+		width: 98%;
+		margin: 10px auto 0;
+		display: inline-block;
+	}
+	.well .div_right label{
+		width: auto;
+	}
+	div#friend_adoption_recommend{
+		margin: 0;
+		width: 49%;
+	}
+	div.alert.alert-success.fade.in{
+		margin: 30px 0 -15px;
+	}
+	.well .carousel {
+		margin-top: 30px;
+	}
+	/***************
+	footer styles
+	***************/
+	footer{
+		position: absolute;
+		right: 0;
+		left: 0;
+	}	
 }
 
 
@@ -161,10 +208,13 @@
 	/***************
 	home styles
 	***************/
+	section .span4px {
+		width: 95%
+	}
 	section .span4px p{
 		text-align: center;
-		margin-bottom: 25px;
-		padding: 0 15px;
+		margin: 0 auto;
+		padding: 0 15px 25px;
 	}
 	.container{
 		width: 90%;
@@ -214,15 +264,15 @@
 	i.gender.female{
 		background-position: -8px -155px;
 		height: 27px;
-	}
+	}	
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 750px) {
 	/***************
 	home styles
 	***************/
 	header a img {
-		width: 70%;
+		width: 60%;
 		display: block;
 		margin: 0 auto 5%;
 		float: none;
@@ -319,6 +369,10 @@
 	a.right.carousel-control, a.left.carousel-control{
 		top: 50%;
 	}
+	.well div#adoption_form, .well div#friend_adoption_recommend{
+		width: 47%;
+		margin: 0 4px;
+	}
 	/***************
 	gender_icon styles
 	***************/
@@ -337,9 +391,25 @@
 		background-position: -7px -112px;
 		height: 20px;
 	}
+	/***************
+	form styles
+	***************/
+	select{
+		width: 100%;
+		margin: 0 3px 5px;
+	}
+	/***************
+	footer styles
+	***************/
+	footer{
+		width: 100%;
+		margin: 0 auto;
+		font-size: 1em;
+	}
+
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 440px){
 	/***************
 	home styles
 	***************/
@@ -375,7 +445,7 @@
 	.well .single_post span p{
 		width: 70%;
 		font-size: 15px;
-		margin-top: 8px;
+		margin: 5px;
 	}
 	/***************
 	show styles
@@ -396,9 +466,9 @@
 	.well .arrow_left{
 		left: 10px;
 	}
-	select{
-		width: 103%;
-		margin: 0 3px;
+	.well div#adoption_form, .well div#friend_adoption_recommend{
+		width: 95%;
+		margin: 5px 0 ;
 	}
 	/***************
 	contact styles
@@ -411,6 +481,13 @@
 	}
 	.contact .grid_48 span{
 		margin: 15px 0 0 3%;
+	}
+	/***************
+	form styles
+	***************/
+	select{
+		width: 103%;
+		margin: 0 3px 5px;
 	}
 	/***************
 	gender_icon styles
@@ -426,11 +503,6 @@
 	i.gender.female{
 		background-position: -8px -155px;
 		height: 27px;
-	}	
-	footer{
-		width: 270px;
-		margin: 0 auto 15px;
-		font-size: 1em;
-	}
+	}		
 }
 

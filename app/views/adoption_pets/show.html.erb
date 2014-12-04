@@ -12,7 +12,7 @@
 
     <div class="carousel-inner" >
       <% @adoption_pet.pictures.each_with_index { |p, index| %>
-        <div class="<%= index == 0 ? 'item active' : 'item' %>"><%= image_tag p.file.thumbnail.url %> </div>
+        <div class="<%= index == 0 ? 'item active' : 'item' %>"><%= image_tag p.file.show.url %> </div>
       <% } %>
     </div>
 
@@ -69,9 +69,7 @@
     <p>Compartir:</p>
     <a id="share_pet_on_fb"><i class="facebook_icon"></i></a>
     <a id="share_pet_on_twitter" title="@adoptamedellin busca un hogar para esta mascota."><i class="twitter_icon"></i></a>
-  </span>
-  
-  <%= link_to 'Regresar', adoption_pets_path, :id => 'back' %>
+  </span>  
 
 </div>
 
@@ -114,6 +112,7 @@
     <% end %>
 </div>
 
+<%= link_to 'Regresar', adoption_pets_path, :id => 'back' %>
 
 <% if logged_in? %>
   <%= link_to 'Edit', edit_adoption_pet_path(@adoption_pet) %> | <%= link_to "Delete", adoption_pet_path(@adoption_pet), method: :delete, data: { confirm: 'Are you sure? There is no go back and pet is gone forever :(' } %>

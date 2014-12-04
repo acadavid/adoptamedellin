@@ -4,7 +4,7 @@ class PetContact < ActiveRecord::Base
   validates :name, :presence => true
   validates :email, :presence => true, :email => true
   validates :phone, :phone => true
-  validates :mobile, :phone => true
+  validates :mobile, :phone => true, :if => lambda { |attrs| attrs[:mobile].present? }
 
   belongs_to :pet
 end
