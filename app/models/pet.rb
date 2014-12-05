@@ -1,4 +1,7 @@
 class Pet < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :name, use: :slugged, :sequence_separator => "_"
+
   attr_accessible :age, :animal, :breed, :color, :gender, :location, :municipality, :marks, :name, :notes, :size, :story, :pictures_attributes, :pet_contact_attributes
 
   validates :animal, :presence => true
@@ -32,5 +35,9 @@ class Pet < ActiveRecord::Base
 
   def at_least_one_picture
     errors.add(:pictures, I18n.t(".errors.messages.greater_than_or_equal_to", count: 1)) if self.pictures.size < 1
+  end
+
+  def should_generate_new_friendly_id?
+    new_record? || slug.blank?
   end
 end

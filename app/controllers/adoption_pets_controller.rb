@@ -17,7 +17,7 @@ class AdoptionPetsController < ApplicationController
   end
 
   def show
-    @adoption_pet = AdoptionPet.find(params[:id])
+    @adoption_pet = Pet.find(params[:id]).owner
     @interested_contact = InterestedContact.new
     @friend_mailer = RecommendMailer.new 
  
@@ -33,7 +33,7 @@ class AdoptionPetsController < ApplicationController
   end
 
   def edit
-    @adoption_pet = AdoptionPet.find(params[:id])
+    @adoption_pet = Pet.find(params[:id]).owner
   end
 
   def create
@@ -48,7 +48,7 @@ class AdoptionPetsController < ApplicationController
   end
 
   def update
-    @adoption_pet = AdoptionPet.find(params[:id])
+    @adoption_pet = Pet.find(params[:id]).owner
     if @adoption_pet.update_attributes(params[:adoption_pet])
       flash[:notice] = 'La publicación fue actualizada exitosamente'
       redirect_to @adoption_pet
@@ -59,13 +59,14 @@ class AdoptionPetsController < ApplicationController
   end
 
   def destroy
-    @adoption_pet = AdoptionPet.find(params[:id])
+    @adoption_pet = Pet.find(params[:id]).owner
     @adoption_pet.destroy
     flash.now[:notice] = 'La publicación fue eliminada exitosamente'
     redirect_to adoption_pets_url
   end
 
   def recommend
+    debugger
     @friend_mailer = RecommendMailer.new(params[:recommend_mailer])
     @adoption_pet = AdoptionPet.find(params[:adoption_pet_id])
     @interested_contact = InterestedContact.new
