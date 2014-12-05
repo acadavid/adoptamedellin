@@ -24,18 +24,20 @@ module AdoptionPetsHelper
   def previous_pet(adoption_pet)
     @previous_pet = AdoptionPet.previous_pet(adoption_pet).recently_created
     if logged_in?
-      @previous_pet.limit(1).first
+      @previous_pet = @previous_pet.limit(1).first
     else
-      @previous_pet.unadopted_pets.limit(1).first
+      @previous_pet = @previous_pet.unadopted_pets.limit(1).first
     end 
+    @previous_pet.slug unless @previous_pet.nil?
   end
 
   def next_pet(adoption_pet)
-    @previous_pet = AdoptionPet.next_pet(adoption_pet)
+    @next_pet = AdoptionPet.next_pet(adoption_pet)
     if logged_in?
-      @previous_pet.limit(1).first
+      @next_pet = @next_pet.limit(1).first
     else
-      @previous_pet.unadopted_pets.limit(1).first
+      @next_pet = @next_pet.unadopted_pets.limit(1)
     end
+    @next_pet.slug unless @next_pet.nil?
   end
 end
