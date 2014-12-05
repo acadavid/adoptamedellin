@@ -12,7 +12,7 @@ class AdoptionPet < ActiveRecord::Base
 
   delegate :name, :age, :animal, :size, :pictures, :pet_contact, :interested_contacts, :gender, :location, :breed, :story, :municipality, :to => :pet
 
-  scope :not_adopted_pets, -> { where(status: "not_adopted") }
+  scope :exclude_pending_approval_pets, -> { where("status != 'pending_approval'") }
 
   scope :previous_pet, -> (adoption_pet) { where('created_at < ?', adoption_pet.created_at) }
 

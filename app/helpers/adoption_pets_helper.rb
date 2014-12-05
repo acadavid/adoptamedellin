@@ -36,7 +36,7 @@ module AdoptionPetsHelper
     if logged_in?
       @previous_pet.limit(1).first
     else
-      @previous_pet.not_adopted_pets.limit(1).first
+      @previous_pet.exclude_pending_approval_pets.limit(1).first
     end 
   end
 
@@ -45,7 +45,7 @@ module AdoptionPetsHelper
     if logged_in?
       @previous_pet.limit(1).first
     else
-      @previous_pet.not_adopted_pets.limit(1).first
+      @previous_pet.exclude_pending_approval_pets.limit(1).first
     end
   end
 end
